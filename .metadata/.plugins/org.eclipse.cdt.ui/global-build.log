@@ -1,0 +1,932 @@
+23:45:20 **** Incremental Build of configuration Release for project GPIO_Blinky_LED ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: GPIO_Blinky_LED.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,GPIO_Blinky_LED.map -mmcu=atmega32 -o "GPIO_Blinky_LED.elf"  ./main.o   
+Finished building target: GPIO_Blinky_LED.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S GPIO_Blinky_LED.elf  >"GPIO_Blinky_LED.lss"
+Finished building: GPIO_Blinky_LED.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex GPIO_Blinky_LED.elf  "GPIO_Blinky_LED.hex"
+Finished building: GPIO_Blinky_LED.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex GPIO_Blinky_LED.elf  "GPIO_Blinky_LED.eep"
+Finished building: GPIO_Blinky_LED.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 GPIO_Blinky_LED.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     118 bytes (0.4% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:48:51 **** Incremental Build of configuration Release for project GPIO_Blinky_LED ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: GPIO_Blinky_LED.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,GPIO_Blinky_LED.map -mmcu=atmega32 -o "GPIO_Blinky_LED.elf"  ./main.o   
+Finished building target: GPIO_Blinky_LED.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S GPIO_Blinky_LED.elf  >"GPIO_Blinky_LED.lss"
+Finished building: GPIO_Blinky_LED.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex GPIO_Blinky_LED.elf  "GPIO_Blinky_LED.hex"
+Finished building: GPIO_Blinky_LED.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex GPIO_Blinky_LED.elf  "GPIO_Blinky_LED.eep"
+Finished building: GPIO_Blinky_LED.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 GPIO_Blinky_LED.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     118 bytes (0.4% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+00:06:46 **** Incremental Build of configuration Release for project GPIO_Blinky_LED ****
+make all 
+Building file: ../LED/LED.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"LED/LED.d" -MT"LED/LED.d" -c -o "LED/LED.o" "../LED/LED.c"
+Finished building: ../LED/LED.c
+ 
+Building target: GPIO_Blinky_LED.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,GPIO_Blinky_LED.map -mmcu=atmega32 -o "GPIO_Blinky_LED.elf"  ./LED/LED.o  ./main.o   
+Finished building target: GPIO_Blinky_LED.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S GPIO_Blinky_LED.elf  >"GPIO_Blinky_LED.lss"
+Finished building: GPIO_Blinky_LED.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex GPIO_Blinky_LED.elf  "GPIO_Blinky_LED.hex"
+Finished building: GPIO_Blinky_LED.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex GPIO_Blinky_LED.elf  "GPIO_Blinky_LED.eep"
+Finished building: GPIO_Blinky_LED.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 GPIO_Blinky_LED.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     118 bytes (0.4% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+00:09:45 **** Incremental Build of configuration Release for project GPIO_Blinky_LED ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 GPIO_Blinky_LED.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     118 bytes (0.4% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+00:22:14 **** Incremental Build of configuration Release for project GPIO_Blinky_LED ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 GPIO_Blinky_LED.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     118 bytes (0.4% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+00:22:17 **** Incremental Build of configuration Release for project GPIO_Blinky_LED ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 GPIO_Blinky_LED.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     118 bytes (0.4% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:05:25 **** Build of configuration Release for project GPIO_Blinky_LED ****
+make all 
+Building file: ../LED/LED.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"LED/LED.d" -MT"LED/LED.d" -c -o "LED/LED.o" "../LED/LED.c"
+../LED/LED.c: In function 'led_cfg':
+../LED/LED.c:20: warning: implicit declaration of function '_nop_'
+../LED/LED.c: In function 'led_init':
+../LED/LED.c:37: error: parameter name omitted
+../LED/LED.c:39: error: invalid operands to binary | (have 'volatile uint8_t *' and 'int')
+../LED/LED.c:43: error: expected expression before 'LED_STATE'
+../LED/LED.c:46: error: invalid operands to binary | (have 'volatile uint8_t *' and 'int')
+../LED/LED.c:50: error: invalid operands to binary & (have 'volatile uint8_t *' and 'int')
+make: *** [LED/LED.o] Error 1
+23:05:47 **** Incremental Build of configuration Release for project GPIO_Blinky_LED ****
+make all 
+Building file: ../LED/LED.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"LED/LED.d" -MT"LED/LED.d" -c -o "LED/LED.o" "../LED/LED.c"
+../LED/LED.c: In function 'led_init':
+../LED/LED.c:37: error: parameter name omitted
+../LED/LED.c:39: error: invalid operands to binary | (have 'volatile uint8_t *' and 'int')
+../LED/LED.c:43: error: expected expression before 'LED_STATE'
+../LED/LED.c:46: error: invalid operands to binary | (have 'volatile uint8_t *' and 'int')
+../LED/LED.c:50: error: invalid operands to binary & (have 'volatile uint8_t *' and 'int')
+make: *** [LED/LED.o] Error 1
+23:06:17 **** Incremental Build of configuration Release for project GPIO_Blinky_LED ****
+make all 
+Building file: ../LED/LED.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"LED/LED.d" -MT"LED/LED.d" -c -o "LED/LED.o" "../LED/LED.c"
+../LED/LED.c: In function 'led_init':
+../LED/LED.c:37: error: parameter name omitted
+../LED/LED.c:43: error: expected expression before 'LED_STATE'
+make: *** [LED/LED.o] Error 1
+23:06:54 **** Incremental Build of configuration Release for project GPIO_Blinky_LED ****
+make all 
+Building file: ../LED/LED.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"LED/LED.d" -MT"LED/LED.d" -c -o "LED/LED.o" "../LED/LED.c"
+Finished building: ../LED/LED.c
+ 
+Building target: GPIO_Blinky_LED.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,GPIO_Blinky_LED.map -mmcu=atmega32 -o "GPIO_Blinky_LED.elf"  ./LED/LED.o  ./main.o   
+Finished building target: GPIO_Blinky_LED.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S GPIO_Blinky_LED.elf  >"GPIO_Blinky_LED.lss"
+Finished building: GPIO_Blinky_LED.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex GPIO_Blinky_LED.elf  "GPIO_Blinky_LED.hex"
+Finished building: GPIO_Blinky_LED.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex GPIO_Blinky_LED.elf  "GPIO_Blinky_LED.eep"
+Finished building: GPIO_Blinky_LED.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 GPIO_Blinky_LED.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     254 bytes (0.8% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:17:57 **** Incremental Build of configuration Release for project GPIO_Blinky_LED ****
+make all 
+Building file: ../LED/LED.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"LED/LED.d" -MT"LED/LED.d" -c -o "LED/LED.o" "../LED/LED.c"
+../LED/LED.c: In function 'led_turn_on':
+../LED/LED.c:69: error: invalid operands to binary | (have 'volatile uint8_t *' and 'int')
+../LED/LED.c: In function 'led_turn_off':
+../LED/LED.c:83: error: invalid operands to binary & (have 'volatile uint8_t *' and 'int')
+../LED/LED.c: In function 'led_toggle':
+../LED/LED.c:124: error: invalid operands to binary ^ (have 'volatile uint8_t *' and 'int')
+make: *** [LED/LED.o] Error 1
+23:18:21 **** Incremental Build of configuration Release for project GPIO_Blinky_LED ****
+make all 
+Building file: ../LED/LED.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"LED/LED.d" -MT"LED/LED.d" -c -o "LED/LED.o" "../LED/LED.c"
+../LED/LED.c: In function 'led_turn_on':
+../LED/LED.c:69: error: invalid operands to binary | (have 'volatile uint8_t *' and 'int')
+../LED/LED.c: In function 'led_turn_off':
+../LED/LED.c:83: error: invalid operands to binary & (have 'volatile uint8_t *' and 'int')
+make: *** [LED/LED.o] Error 1
+23:18:34 **** Incremental Build of configuration Release for project GPIO_Blinky_LED ****
+make all 
+Building file: ../LED/LED.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"LED/LED.d" -MT"LED/LED.d" -c -o "LED/LED.o" "../LED/LED.c"
+Finished building: ../LED/LED.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: GPIO_Blinky_LED.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,GPIO_Blinky_LED.map -mmcu=atmega32 -o "GPIO_Blinky_LED.elf"  ./LED/LED.o  ./main.o   
+Finished building target: GPIO_Blinky_LED.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S GPIO_Blinky_LED.elf  >"GPIO_Blinky_LED.lss"
+Finished building: GPIO_Blinky_LED.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex GPIO_Blinky_LED.elf  "GPIO_Blinky_LED.hex"
+Finished building: GPIO_Blinky_LED.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex GPIO_Blinky_LED.elf  "GPIO_Blinky_LED.eep"
+Finished building: GPIO_Blinky_LED.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 GPIO_Blinky_LED.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    4214 bytes (12.9% Full)
+(.text + .data + .bootloader)
+
+Data:        264 bytes (12.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:19:55 **** Incremental Build of configuration Release for project GPIO_Blinky_LED ****
+make all 
+Building file: ../LED/LED.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"LED/LED.d" -MT"LED/LED.d" -c -o "LED/LED.o" "../LED/LED.c"
+../LED/LED.c: In function 'led_cfg':
+../LED/LED.c:19: warning: assignment makes pointer from integer without a cast
+../LED/LED.c:22: warning: assignment makes pointer from integer without a cast
+../LED/LED.c:25: error: invalid type argument of 'unary *' (have 'int')
+make: *** [LED/LED.o] Error 1
+23:20:06 **** Incremental Build of configuration Release for project GPIO_Blinky_LED ****
+make all 
+Building file: ../LED/LED.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"LED/LED.d" -MT"LED/LED.d" -c -o "LED/LED.o" "../LED/LED.c"
+../LED/LED.c: In function 'led_cfg':
+../LED/LED.c:19: warning: assignment from incompatible pointer type
+../LED/LED.c:22: warning: assignment from incompatible pointer type
+../LED/LED.c:25: warning: assignment makes integer from pointer without a cast
+Finished building: ../LED/LED.c
+ 
+Building target: GPIO_Blinky_LED.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,GPIO_Blinky_LED.map -mmcu=atmega32 -o "GPIO_Blinky_LED.elf"  ./LED/LED.o  ./main.o   
+Finished building target: GPIO_Blinky_LED.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S GPIO_Blinky_LED.elf  >"GPIO_Blinky_LED.lss"
+Finished building: GPIO_Blinky_LED.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex GPIO_Blinky_LED.elf  "GPIO_Blinky_LED.hex"
+Finished building: GPIO_Blinky_LED.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex GPIO_Blinky_LED.elf  "GPIO_Blinky_LED.eep"
+Finished building: GPIO_Blinky_LED.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 GPIO_Blinky_LED.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    4214 bytes (12.9% Full)
+(.text + .data + .bootloader)
+
+Data:        264 bytes (12.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:21:57 **** Incremental Build of configuration Release for project GPIO_Blinky_LED ****
+make all 
+Building file: ../LED/LED.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"LED/LED.d" -MT"LED/LED.d" -c -o "LED/LED.o" "../LED/LED.c"
+Finished building: ../LED/LED.c
+ 
+Building target: GPIO_Blinky_LED.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,GPIO_Blinky_LED.map -mmcu=atmega32 -o "GPIO_Blinky_LED.elf"  ./LED/LED.o  ./main.o   
+Finished building target: GPIO_Blinky_LED.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S GPIO_Blinky_LED.elf  >"GPIO_Blinky_LED.lss"
+Finished building: GPIO_Blinky_LED.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex GPIO_Blinky_LED.elf  "GPIO_Blinky_LED.hex"
+Finished building: GPIO_Blinky_LED.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex GPIO_Blinky_LED.elf  "GPIO_Blinky_LED.eep"
+Finished building: GPIO_Blinky_LED.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 GPIO_Blinky_LED.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    4214 bytes (12.9% Full)
+(.text + .data + .bootloader)
+
+Data:        264 bytes (12.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:46:46 **** Incremental Build of configuration Release for project GPIO_Blinky_LED ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: GPIO_Blinky_LED.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,GPIO_Blinky_LED.map -mmcu=atmega32 -o "GPIO_Blinky_LED.elf"  ./LED/LED.o  ./main.o   
+Finished building target: GPIO_Blinky_LED.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S GPIO_Blinky_LED.elf  >"GPIO_Blinky_LED.lss"
+Finished building: GPIO_Blinky_LED.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex GPIO_Blinky_LED.elf  "GPIO_Blinky_LED.hex"
+Finished building: GPIO_Blinky_LED.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex GPIO_Blinky_LED.elf  "GPIO_Blinky_LED.eep"
+Finished building: GPIO_Blinky_LED.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 GPIO_Blinky_LED.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    4202 bytes (12.8% Full)
+(.text + .data + .bootloader)
+
+Data:        264 bytes (12.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:53:37 **** Incremental Build of configuration Release for project GPIO_Blinky_LED ****
+make all 
+Building file: ../LED/LED.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"LED/LED.d" -MT"LED/LED.d" -c -o "LED/LED.o" "../LED/LED.c"
+../LED/LED.c: In function 'led_cfg':
+../LED/LED.c:19: warning: assignment from incompatible pointer type
+Finished building: ../LED/LED.c
+ 
+Building target: GPIO_Blinky_LED.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,GPIO_Blinky_LED.map -mmcu=atmega32 -o "GPIO_Blinky_LED.elf"  ./LED/LED.o  ./main.o   
+Finished building target: GPIO_Blinky_LED.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S GPIO_Blinky_LED.elf  >"GPIO_Blinky_LED.lss"
+Finished building: GPIO_Blinky_LED.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex GPIO_Blinky_LED.elf  "GPIO_Blinky_LED.hex"
+Finished building: GPIO_Blinky_LED.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex GPIO_Blinky_LED.elf  "GPIO_Blinky_LED.eep"
+Finished building: GPIO_Blinky_LED.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 GPIO_Blinky_LED.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    4202 bytes (12.8% Full)
+(.text + .data + .bootloader)
+
+Data:        264 bytes (12.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:53:51 **** Incremental Build of configuration Release for project GPIO_Blinky_LED ****
+make all 
+Building file: ../LED/LED.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"LED/LED.d" -MT"LED/LED.d" -c -o "LED/LED.o" "../LED/LED.c"
+../LED/LED.c: In function 'led_cfg':
+../LED/LED.c:19: warning: assignment from incompatible pointer type
+../LED/LED.c:22: warning: assignment from incompatible pointer type
+Finished building: ../LED/LED.c
+ 
+Building target: GPIO_Blinky_LED.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,GPIO_Blinky_LED.map -mmcu=atmega32 -o "GPIO_Blinky_LED.elf"  ./LED/LED.o  ./main.o   
+Finished building target: GPIO_Blinky_LED.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S GPIO_Blinky_LED.elf  >"GPIO_Blinky_LED.lss"
+Finished building: GPIO_Blinky_LED.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex GPIO_Blinky_LED.elf  "GPIO_Blinky_LED.hex"
+Finished building: GPIO_Blinky_LED.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex GPIO_Blinky_LED.elf  "GPIO_Blinky_LED.eep"
+Finished building: GPIO_Blinky_LED.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 GPIO_Blinky_LED.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    4202 bytes (12.8% Full)
+(.text + .data + .bootloader)
+
+Data:        264 bytes (12.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:54:04 **** Incremental Build of configuration Release for project GPIO_Blinky_LED ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: GPIO_Blinky_LED.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,GPIO_Blinky_LED.map -mmcu=atmega32 -o "GPIO_Blinky_LED.elf"  ./LED/LED.o  ./main.o   
+Finished building target: GPIO_Blinky_LED.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S GPIO_Blinky_LED.elf  >"GPIO_Blinky_LED.lss"
+Finished building: GPIO_Blinky_LED.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex GPIO_Blinky_LED.elf  "GPIO_Blinky_LED.hex"
+Finished building: GPIO_Blinky_LED.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex GPIO_Blinky_LED.elf  "GPIO_Blinky_LED.eep"
+Finished building: GPIO_Blinky_LED.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 GPIO_Blinky_LED.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    4214 bytes (12.9% Full)
+(.text + .data + .bootloader)
+
+Data:        264 bytes (12.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:59:50 **** Incremental Build of configuration Release for project GPIO_Blinky_LED ****
+make all 
+Building file: ../LED/LED.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"LED/LED.d" -MT"LED/LED.d" -c -o "LED/LED.o" "../LED/LED.c"
+../LED/LED.c: In function 'led_cfg':
+../LED/LED.c:19: warning: assignment from incompatible pointer type
+../LED/LED.c:22: warning: assignment from incompatible pointer type
+Finished building: ../LED/LED.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: GPIO_Blinky_LED.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,GPIO_Blinky_LED.map -mmcu=atmega32 -o "GPIO_Blinky_LED.elf"  ./LED/LED.o  ./main.o   
+Finished building target: GPIO_Blinky_LED.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S GPIO_Blinky_LED.elf  >"GPIO_Blinky_LED.lss"
+Finished building: GPIO_Blinky_LED.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex GPIO_Blinky_LED.elf  "GPIO_Blinky_LED.hex"
+Finished building: GPIO_Blinky_LED.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex GPIO_Blinky_LED.elf  "GPIO_Blinky_LED.eep"
+Finished building: GPIO_Blinky_LED.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 GPIO_Blinky_LED.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    4218 bytes (12.9% Full)
+(.text + .data + .bootloader)
+
+Data:        264 bytes (12.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:59:58 **** Incremental Build of configuration Release for project GPIO_Blinky_LED ****
+make all 
+Building file: ../LED/LED.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"LED/LED.d" -MT"LED/LED.d" -c -o "LED/LED.o" "../LED/LED.c"
+Finished building: ../LED/LED.c
+ 
+Building target: GPIO_Blinky_LED.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,GPIO_Blinky_LED.map -mmcu=atmega32 -o "GPIO_Blinky_LED.elf"  ./LED/LED.o  ./main.o   
+Finished building target: GPIO_Blinky_LED.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S GPIO_Blinky_LED.elf  >"GPIO_Blinky_LED.lss"
+Finished building: GPIO_Blinky_LED.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex GPIO_Blinky_LED.elf  "GPIO_Blinky_LED.hex"
+Finished building: GPIO_Blinky_LED.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex GPIO_Blinky_LED.elf  "GPIO_Blinky_LED.eep"
+Finished building: GPIO_Blinky_LED.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 GPIO_Blinky_LED.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    4186 bytes (12.8% Full)
+(.text + .data + .bootloader)
+
+Data:        264 bytes (12.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:06:52 **** Incremental Build of configuration Release for project GPIO_Blinky_LED ****
+make all 
+Building file: ../LED/LED.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"LED/LED.d" -MT"LED/LED.d" -c -o "LED/LED.o" "../LED/LED.c"
+In file included from ../LED/LED.c:9:
+../LED/LED.h:24: error: multiple storage classes in declaration specifiers
+../LED/LED.h:52: error: expected ';', ',' or ')' before '=' token
+../LED/LED.c: In function 'led_init':
+../LED/LED.c:41: error: request for member 'pin' in something not a structure or union
+../LED/LED.c:48: error: request for member 'pin' in something not a structure or union
+../LED/LED.c:52: error: request for member 'pin' in something not a structure or union
+../LED/LED.c: At top level:
+../LED/LED.c:69: error: conflicting types for 'led_turn_on'
+../LED/LED.h:68: error: previous declaration of 'led_turn_on' was here
+../LED/LED.c: In function 'led_turn_on':
+../LED/LED.c:72: error: invalid type argument of '->' (have 'GPIO_LED')
+../LED/LED.c:75: error: invalid type argument of '->' (have 'GPIO_LED')
+../LED/LED.c:79: error: invalid type argument of '->' (have 'GPIO_LED')
+../LED/LED.c: In function 'led_turn_off':
+../LED/LED.c:102: error: request for member 'pin' in something not a structure or union
+../LED/LED.c:106: error: request for member 'pin' in something not a structure or union
+make: *** [LED/LED.o] Error 1
+22:07:03 **** Incremental Build of configuration Release for project GPIO_Blinky_LED ****
+make all 
+Building file: ../LED/LED.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"LED/LED.d" -MT"LED/LED.d" -c -o "LED/LED.o" "../LED/LED.c"
+In file included from ../LED/LED.c:9:
+../LED/LED.h:52: error: expected ';', ',' or ')' before '=' token
+../LED/LED.c: In function 'led_init':
+../LED/LED.c:41: error: request for member 'pin' in something not a structure or union
+../LED/LED.c:48: error: request for member 'pin' in something not a structure or union
+../LED/LED.c:52: error: request for member 'pin' in something not a structure or union
+../LED/LED.c: At top level:
+../LED/LED.c:69: error: conflicting types for 'led_turn_on'
+../LED/LED.h:68: error: previous declaration of 'led_turn_on' was here
+../LED/LED.c: In function 'led_turn_on':
+../LED/LED.c:72: error: invalid type argument of '->' (have 'GPIO_LED')
+../LED/LED.c:75: error: invalid type argument of '->' (have 'GPIO_LED')
+../LED/LED.c:79: error: invalid type argument of '->' (have 'GPIO_LED')
+../LED/LED.c: In function 'led_turn_off':
+../LED/LED.c:102: error: request for member 'pin' in something not a structure or union
+../LED/LED.c:106: error: request for member 'pin' in something not a structure or union
+make: *** [LED/LED.o] Error 1
+22:07:32 **** Incremental Build of configuration Release for project GPIO_Blinky_LED ****
+make all 
+Building file: ../LED/LED.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"LED/LED.d" -MT"LED/LED.d" -c -o "LED/LED.o" "../LED/LED.c"
+../LED/LED.c: In function 'led_init':
+../LED/LED.c:41: error: request for member 'pin' in something not a structure or union
+../LED/LED.c:48: error: request for member 'pin' in something not a structure or union
+../LED/LED.c:52: error: request for member 'pin' in something not a structure or union
+../LED/LED.c: At top level:
+../LED/LED.c:69: error: conflicting types for 'led_turn_on'
+../LED/LED.h:68: error: previous declaration of 'led_turn_on' was here
+../LED/LED.c: In function 'led_turn_on':
+../LED/LED.c:72: error: invalid type argument of '->' (have 'GPIO_LED')
+../LED/LED.c:75: error: invalid type argument of '->' (have 'GPIO_LED')
+../LED/LED.c:79: error: invalid type argument of '->' (have 'GPIO_LED')
+../LED/LED.c: In function 'led_turn_off':
+../LED/LED.c:102: error: request for member 'pin' in something not a structure or union
+../LED/LED.c:106: error: request for member 'pin' in something not a structure or union
+make: *** [LED/LED.o] Error 1
+22:07:45 **** Incremental Build of configuration Release for project GPIO_Blinky_LED ****
+make all 
+Building file: ../LED/LED.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"LED/LED.d" -MT"LED/LED.d" -c -o "LED/LED.o" "../LED/LED.c"
+../LED/LED.c: In function 'led_init':
+../LED/LED.c:48: error: request for member 'pin' in something not a structure or union
+../LED/LED.c:52: error: request for member 'pin' in something not a structure or union
+../LED/LED.c: At top level:
+../LED/LED.c:69: error: conflicting types for 'led_turn_on'
+../LED/LED.h:68: error: previous declaration of 'led_turn_on' was here
+../LED/LED.c: In function 'led_turn_on':
+../LED/LED.c:72: error: invalid type argument of '->' (have 'GPIO_LED')
+../LED/LED.c:75: error: invalid type argument of '->' (have 'GPIO_LED')
+../LED/LED.c:79: error: invalid type argument of '->' (have 'GPIO_LED')
+../LED/LED.c: In function 'led_turn_off':
+../LED/LED.c:102: error: request for member 'pin' in something not a structure or union
+../LED/LED.c:106: error: request for member 'pin' in something not a structure or union
+make: *** [LED/LED.o] Error 1
+22:11:10 **** Incremental Build of configuration Release for project GPIO_Blinky_LED ****
+make all 
+Building file: ../LED/LED.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"LED/LED.d" -MT"LED/LED.d" -c -o "LED/LED.o" "../LED/LED.c"
+../LED/LED.c:69: error: conflicting types for 'led_turn_on'
+../LED/LED.h:68: error: previous declaration of 'led_turn_on' was here
+../LED/LED.c: In function 'led_turn_on':
+../LED/LED.c:72: error: invalid type argument of '->' (have 'GPIO_LED')
+../LED/LED.c:75: error: invalid type argument of '->' (have 'GPIO_LED')
+../LED/LED.c:79: error: invalid type argument of '->' (have 'GPIO_LED')
+../LED/LED.c: In function 'led_turn_off':
+../LED/LED.c:102: error: request for member 'pin' in something not a structure or union
+../LED/LED.c:106: error: request for member 'pin' in something not a structure or union
+make: *** [LED/LED.o] Error 1
+22:11:33 **** Incremental Build of configuration Release for project GPIO_Blinky_LED ****
+make all 
+Building file: ../LED/LED.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"LED/LED.d" -MT"LED/LED.d" -c -o "LED/LED.o" "../LED/LED.c"
+Finished building: ../LED/LED.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: GPIO_Blinky_LED.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,GPIO_Blinky_LED.map -mmcu=atmega32 -o "GPIO_Blinky_LED.elf"  ./LED/LED.o  ./main.o   
+Finished building target: GPIO_Blinky_LED.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S GPIO_Blinky_LED.elf  >"GPIO_Blinky_LED.lss"
+Finished building: GPIO_Blinky_LED.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex GPIO_Blinky_LED.elf  "GPIO_Blinky_LED.hex"
+Finished building: GPIO_Blinky_LED.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex GPIO_Blinky_LED.elf  "GPIO_Blinky_LED.eep"
+Finished building: GPIO_Blinky_LED.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 GPIO_Blinky_LED.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    4210 bytes (12.8% Full)
+(.text + .data + .bootloader)
+
+Data:        264 bytes (12.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:12:10 **** Incremental Build of configuration Release for project GPIO_Blinky_LED ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: GPIO_Blinky_LED.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,GPIO_Blinky_LED.map -mmcu=atmega32 -o "GPIO_Blinky_LED.elf"  ./LED/LED.o  ./main.o   
+Finished building target: GPIO_Blinky_LED.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S GPIO_Blinky_LED.elf  >"GPIO_Blinky_LED.lss"
+Finished building: GPIO_Blinky_LED.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex GPIO_Blinky_LED.elf  "GPIO_Blinky_LED.hex"
+Finished building: GPIO_Blinky_LED.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex GPIO_Blinky_LED.elf  "GPIO_Blinky_LED.eep"
+Finished building: GPIO_Blinky_LED.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 GPIO_Blinky_LED.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    4236 bytes (12.9% Full)
+(.text + .data + .bootloader)
+
+Data:        264 bytes (12.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:45:22 **** Incremental Build of configuration Release for project GPIO_Blinky_LED ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:38: error: too few arguments to function 'led_toggle'
+make: *** [main.o] Error 1
+22:45:41 **** Incremental Build of configuration Release for project GPIO_Blinky_LED ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: GPIO_Blinky_LED.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,GPIO_Blinky_LED.map -mmcu=atmega32 -o "GPIO_Blinky_LED.elf"  ./LED/LED.o  ./main.o   
+Finished building target: GPIO_Blinky_LED.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S GPIO_Blinky_LED.elf  >"GPIO_Blinky_LED.lss"
+Finished building: GPIO_Blinky_LED.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex GPIO_Blinky_LED.elf  "GPIO_Blinky_LED.hex"
+Finished building: GPIO_Blinky_LED.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex GPIO_Blinky_LED.elf  "GPIO_Blinky_LED.eep"
+Finished building: GPIO_Blinky_LED.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 GPIO_Blinky_LED.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    4198 bytes (12.8% Full)
+(.text + .data + .bootloader)
+
+Data:        264 bytes (12.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:46:54 **** Incremental Build of configuration Release for project GPIO_Blinky_LED ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: GPIO_Blinky_LED.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,GPIO_Blinky_LED.map -mmcu=atmega32 -o "GPIO_Blinky_LED.elf"  ./LED/LED.o  ./main.o   
+Finished building target: GPIO_Blinky_LED.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S GPIO_Blinky_LED.elf  >"GPIO_Blinky_LED.lss"
+Finished building: GPIO_Blinky_LED.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex GPIO_Blinky_LED.elf  "GPIO_Blinky_LED.hex"
+Finished building: GPIO_Blinky_LED.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex GPIO_Blinky_LED.elf  "GPIO_Blinky_LED.eep"
+Finished building: GPIO_Blinky_LED.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 GPIO_Blinky_LED.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    4198 bytes (12.8% Full)
+(.text + .data + .bootloader)
+
+Data:        264 bytes (12.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:57:06 **** Build of configuration Release for project GPIO_Blinky_LED ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 GPIO_Blinky_LED.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    4198 bytes (12.8% Full)
+(.text + .data + .bootloader)
+
+Data:        264 bytes (12.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 

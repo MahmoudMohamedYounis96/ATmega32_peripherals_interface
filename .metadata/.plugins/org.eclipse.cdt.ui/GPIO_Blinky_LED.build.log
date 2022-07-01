@@ -1,0 +1,20 @@
+22:57:06 **** Build of configuration Release for project GPIO_Blinky_LED ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 GPIO_Blinky_LED.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    4198 bytes (12.8% Full)
+(.text + .data + .bootloader)
+
+Data:        264 bytes (12.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+22:57:06 Build Finished (took 133ms)
+

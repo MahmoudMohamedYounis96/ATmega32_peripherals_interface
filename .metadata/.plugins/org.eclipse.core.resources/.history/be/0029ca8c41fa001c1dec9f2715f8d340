@@ -38,8 +38,7 @@ int main(void)
 		// toggle LED every one second.
 		led_toggle(&green_led, 1);
 	}
-
-	return 0; // exit the program.
+	return 0;
 }
 
 

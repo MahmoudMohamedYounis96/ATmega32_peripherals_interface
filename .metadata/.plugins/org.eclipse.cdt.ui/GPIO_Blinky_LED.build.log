@@ -1,4 +1,4 @@
-22:57:06 **** Build of configuration Release for project GPIO_Blinky_LED ****
+22:23:55 **** Incremental Build of configuration Release for project GPIO_Blinky_LED ****
 make all 
 Invoking: Print Size
 avr-size --format=avr --mcu=atmega32 GPIO_Blinky_LED.elf
@@ -16,5 +16,5 @@ Data:        264 bytes (12.9% Full)
 Finished building: sizedummy
  
 
-22:57:06 Build Finished (took 133ms)
+22:23:55 Build Finished (took 216ms)
 

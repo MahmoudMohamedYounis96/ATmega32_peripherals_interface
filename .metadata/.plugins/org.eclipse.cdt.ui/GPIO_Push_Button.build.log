@@ -1,0 +1,42 @@
+22:31:17 **** Build of configuration Release for project GPIO_Push_Button ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: GPIO_Push_Button.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,GPIO_Push_Button.map -mmcu=atmega32 -o "GPIO_Push_Button.elf"  ./push_button/Push_Button.o  ./LED/LED.o  ./main.o   
+Finished building target: GPIO_Push_Button.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S GPIO_Push_Button.elf  >"GPIO_Push_Button.lss"
+Finished building: GPIO_Push_Button.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex GPIO_Push_Button.elf  "GPIO_Push_Button.hex"
+Finished building: GPIO_Push_Button.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex GPIO_Push_Button.elf  "GPIO_Push_Button.eep"
+Finished building: GPIO_Push_Button.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 GPIO_Push_Button.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    4454 bytes (13.6% Full)
+(.text + .data + .bootloader)
+
+Data:        264 bytes (12.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+22:31:18 Build Finished (took 977ms)
+

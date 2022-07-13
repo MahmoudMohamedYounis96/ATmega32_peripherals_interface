@@ -1,0 +1,18 @@
+/*
+ * Monitor.h
+ *
+ *  Created on: Jul 12, 2022
+ *      Author: Mahmoud_Mohamed
+ */
+
+#ifndef MONITOR_H_
+#define MONITOR_H_
+
+/* ============================ includes ============================ */
+#include"../lcd/lcd_alphanumeric_16x2.h"
+
+/* ============================ Type definitions ============================ */
+typedef LCD_ALPHANUMERIC_16X2 Liquid_Crystal_Display_16x2;
+
+
+#endif /* MONITOR_H_ */

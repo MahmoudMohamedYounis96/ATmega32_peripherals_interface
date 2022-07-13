@@ -1,0 +1,31 @@
+/*
+ * main.c
+ *
+ *  Created on: Jul 4, 2022
+ *      Author: Mahmoud_Mohamed
+ */
+
+/*********************** includes ***************************/
+#include <avr/io.h>
+#include <util/delay.h>
+#include "lcd/lcd_alphanumeric_16x2.h"
+
+/*********************************************************
+ * 		main()
+ *
+ * 	Description : Application entry point.
+ */
+int main(void){
+	LCD_ALPHANUMERIC_16X2 lcd;
+
+	uint8_t data_pins[4] = {PD0, PD1, PD2, PD3};
+	lcd_alphnumeric_16x2_cfg(&lcd, &DDRD, &PORTD, &DDRB, &PORTB, data_pins, PB0, PB1, MODE_4_BITS);
+	lcd_alphnumeric_16x2_init(&lcd);
+
+	char *a="Hello";
+	void *ptr = &a;
+	lcd_alphnumeric_16x2_print(&lcd, ptr, CHAR);
+	while(1);
+	return 0;
+}
+

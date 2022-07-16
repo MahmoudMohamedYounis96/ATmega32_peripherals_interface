@@ -1,11 +1,8 @@
-17:19:29 **** Incremental Build of configuration Release for project GPIO_LCD ****
+16:37:58 **** Incremental Build of configuration Release for project GPIO_LCD ****
 make all 
 Building file: ../main.c
 Invoking: AVR Compiler
 avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
-../main.c: In function 'main':
-../main.c:34: warning: unused variable 'ptr'
-../main.c:22: warning: 'lcd.obj' is used uninitialized in this function
 Finished building: ../main.c
  
 Building target: GPIO_LCD.elf
@@ -31,15 +28,15 @@ AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:    3718 bytes (11.3% Full)
+Program:    4360 bytes (13.3% Full)
 (.text + .data + .bootloader)
 
-Data:          2 bytes (0.1% Full)
+Data:         12 bytes (0.6% Full)
 (.data + .bss + .noinit)
 
 
 Finished building: sizedummy
  
 
-17:19:29 Build Finished (took 492ms)
+16:38:00 Build Finished (took 1s.244ms)
 

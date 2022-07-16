@@ -355,7 +355,7 @@ void lcd_alphnumeric_16x2_print(LCD_ALPHANUMERIC_16X2* plcd, void *ptr_data, _fo
 		break;
 
 	case _s:
-		lcd_alphnumeric_16x2_send_string(plcd, *(char*)ptr_data);
+		lcd_alphnumeric_16x2_send_string(plcd, (char*)ptr_data);
 		break;
 
 	case _d:
@@ -372,4 +372,21 @@ void lcd_alphnumeric_16x2_print(LCD_ALPHANUMERIC_16X2* plcd, void *ptr_data, _fo
 
 	// exit the function.
 	return;
+}
+
+/***************************************************************
+ *  lcd_alphnumeric_16x2_Flush()
+ *
+ *  	type....
+ *  	 void
+ *
+ *  	 Description....
+ *  	  a function used to internal data register of the lcd.
+ */
+void lcd_alphnumeric_16x2_flush(LCD_ALPHANUMERIC_16X2* plcd){
+
+	uint8_t* buffer = "\0";
+
+	lcd_alphnumeric_16x2_send_string(plcd, buffer);
+
 }

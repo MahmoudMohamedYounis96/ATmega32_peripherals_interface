@@ -225,4 +225,15 @@ void lcd_alphnumeric_16x2_clear(LCD_ALPHANUMERIC_16X2* plcd);
  */
 void lcd_alphnumeric_16x2_print(LCD_ALPHANUMERIC_16X2* plcd, void *ptr_data, _format data);
 
+/***************************************************************
+ *  lcd_alphnumeric_16x2_Flush()
+ *
+ *  	type....
+ *  	 void
+ *
+ *  	 Description....
+ *  	  a function used to internal data register of the lcd.
+ */
+void lcd_alphnumeric_16x2_flush(LCD_ALPHANUMERIC_16X2* plcd);
+
 #endif /* LCD_ALPHANUMERIC_16X2_H_ */

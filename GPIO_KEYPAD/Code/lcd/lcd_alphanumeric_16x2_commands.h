@@ -55,46 +55,47 @@
  * Moves cursor and shifts display without changing DDRAM contents.
  * 	 Delay time = 37 us, ~= 40 us
  */
-// >> Cursor move to the left.
+// Cursor move to the left.
 #define cursor_move_to_the_left		(0x10)
 
-// >> Cursor move to the right.
+// Cursor move to the right.
 #define cursor_move_to_the_right	(0x14)
 
-// >> display move to the left.
+// display move to the left.
 #define display_move_to_the_left	(0x18)
 
-// >> display move to the right.
+// display move to the right.
 #define display_move_to_the_right	(0x1C)
+
+/********************************************************************************************
+ * Sets interface data length (DL), number of display lines (N), and character font (F).
+ * 	Delay time = 37 us, ~= 40 us.
+ */
+// 4-bit mode.
+#define _4_bits_1_line_5x8_dots		(0x20)
+#define _4_bits_1_line_5x10_dots	(0x24)
+#define _4_bits_2_lines_5x8_dots	(0x28)
+
+// 8-bit mode.
+#define _8_bits_1_line_5x8_dots		(0x30)
+#define _8_bits_1_line_5x10_dots	(0x34)
+#define _8_bits_2_lines_5x8_dots	(0x38)
+
+/***************************************************
+ * Beginning to the 1st line.
+ * 	 0x8n, n = 0:F ==> n is the cursor position.
+ */
+#define force_cusror_to_start_with_1st_row	(0x80)
+
+/***************************************************
+ * Beginning to the 2nd line.
+ * 	 0xCn, n = 0:F ==> n is the cursor position.
+ */
+#define force_cusror_to_start_with_2nd_row	(0xC0)
+
+/**************************************
+ * LCD first initialization command.
+ */
+#define __init__	(0x32)
+
 #endif /* LCD_ALPHANUMERIC_16X2_COMMANDS_H_ */
-
-
-
-
-
-/*
- * */
-
-
-/* Sets interface data length (DL), number of display lines (N), and character font (F).
- * delay time = 37 us, ~= 40 us*/
-// >> 4-bit mode.
-#define _4_bits_1_line_5x8_dots					 (0x20)
-#define _4_bits_1_line_5x10_dots				 (0x24)
-#define _4_bits_2_lines_5x8_dots				 (0x28)
-
-// >> 8-bit mode.
-#define _8_bits_1_line_5x8_dots					 (0x30)
-#define _8_bits_1_line_5x10_dots				 (0x34)
-#define _8_bits_2_lines_5x8_dots				 (0x38)
-
-/* beginning to the 1st line */
-/* 0x8n, n = 0:F ==> n is the cursor position. */
-#define force_cusror_to_start_with_1st_row	     (0x80)
-
-/* beginning to the 2nd line */
-/* 0xCn, n = 0:F ==> n is the cursor position. */
-#define force_cusror_to_start_with_2nd_row	     (0xC0)
-
-/* init lcd mode. */
-#define __init__							     (0x32)

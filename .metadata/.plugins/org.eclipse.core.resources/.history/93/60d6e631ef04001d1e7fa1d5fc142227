@@ -1,0 +1,31 @@
+/*
+ * keypad4x4.c
+ *
+ *  Created on: Jul 16, 2022
+ *      Author: Mahmoud_Mohamed
+ */
+#include "keypad4x4.h"
+void Keypad_Cfg(KeyPad_4x4* Ptr_Keypad, REGISTER row_DDR, REGISTER row_PIN, uint8_t row_pins[4], REGISTER col_DDR, REGISTER col_PORT, uint8_t col_pins[4]){
+
+	Ptr_Keypad->row.DDR = row_DDR;
+
+	Ptr_Keypad->row.PIN = row_PIN;
+
+	for(uint8_t i=0; i<3; i++){
+		Ptr_Keypad->row.pins[i] = row_pins[i];
+	}
+
+	// ****=****=****=****=****=****
+
+	Ptr_Keypad->col.DDR = col_DDR;
+
+	Ptr_Keypad->col.PORT = col_PORT;
+
+	for(uint8_t i=0; i<3; i++){
+		Ptr_Keypad->col.pins[i] = col_pins[i];
+	}
+
+	return;
+}
+
+

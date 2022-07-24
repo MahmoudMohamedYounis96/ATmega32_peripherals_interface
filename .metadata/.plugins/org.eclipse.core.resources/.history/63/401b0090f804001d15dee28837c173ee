@@ -1,0 +1,61 @@
+/*
+ * keypad4x4.c
+ *
+ *  Created on: Jul 16, 2022
+ *      Author: Mahmoud_Mohamed
+ */
+#include "keypad4x4.h"
+
+void Keypad_Cfg(KeyPad_4x4* Ptr_Keypad, REGISTER row_DDR, REGISTER row_PIN,  REGISTER row_PORT, uint8_t row_pins[4], REGISTER col_DDR, REGISTER col_PORT, uint8_t col_pins[4]){
+
+	Ptr_Keypad->row.DDR = row_DDR;
+
+	Ptr_Keypad->row.PORT = row_PORT;
+
+	Ptr_Keypad->row.PIN = row_PIN;
+
+	for(uint8_t i=0; i<3; i++){
+		Ptr_Keypad->row.pins[i] = row_pins[i];
+	}
+
+	// ****=****=****=****=****=****
+
+	Ptr_Keypad->col.DDR = col_DDR;
+
+	Ptr_Keypad->col.PORT = col_PORT;
+
+	for(uint8_t i=0; i<3; i++){
+		Ptr_Keypad->col.pins[i] = col_pins[i];
+	}
+
+	return;
+}
+
+
+void Keypad_Init(KeyPad_4x4* Ptr_Keypad){
+
+	/* Rows */
+	for (uint8_t i=0; i<5; i++) {
+		// 1.Configure all row_pins as input pins.
+		*Ptr_Keypad->row.DDR &= ~(1<<Ptr_Keypad->row.pins[i]);
+		kick();
+
+		// 2.Activate all pull-up resistors.
+		*Ptr_Keypad->row.PORT |= (1<<Ptr_Keypad->row.pins[i]);
+		kick();
+	}
+
+	/* Columns */
+
+	for (uint8_t i=0; i<5; i++) {
+		// 1.Configure all row_pins as output pins.
+		*Ptr_Keypad->col.DDR |= (1<<Ptr_Keypad->col.pins[i]);
+		kick();
+
+		// 2.Set all pins to logic one.
+		*Ptr_Keypad->col.PORT &= ~(1<<Ptr_Keypad->col.pins[i]);
+		kick();
+	}
+
+	return;
+}

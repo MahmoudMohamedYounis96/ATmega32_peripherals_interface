@@ -1,0 +1,100 @@
+/*
+ * keypad4x4.c
+ *
+ *  Created on: Jul 16, 2022
+ *      Author: Mahmoud_Mohamed
+ */
+#include "keypad4x4.h"
+
+void Keypad_Cfg(KeyPad_4x4* Ptr_Keypad, REGISTER row_DDR, REGISTER row_PIN,  REGISTER row_PORT, uint8_t row_pins[], REGISTER col_DDR, REGISTER col_PORT, uint8_t col_pins[]){
+
+	Ptr_Keypad->row.DDR = row_DDR;
+
+	Ptr_Keypad->row.PORT = row_PORT;
+
+	Ptr_Keypad->row.PIN = row_PIN;
+
+	for(uint8_t i=0; i<NUM_ROW; i++){
+		Ptr_Keypad->row.pins[i] = row_pins[i];
+	}
+
+	// ****=****=****=****=****=****
+
+	Ptr_Keypad->col.DDR = col_DDR;
+
+	Ptr_Keypad->col.PORT = col_PORT;
+
+	for(uint8_t i=0; i<NUM_COL; i++){
+		Ptr_Keypad->col.pins[i] = col_pins[i];
+	}
+
+	return;
+}
+
+/*=================================================================================================*/
+
+void Keypad_Init(KeyPad_4x4* Ptr_Keypad){
+
+	/* Rows */
+	for (uint8_t i=0; i<NUM_ROW; i++) {
+		// 1.Configure all row_pins as input pins.
+		*Ptr_Keypad->row.DDR &= ~(1<<Ptr_Keypad->row.pins[i]);
+		kick();
+
+		// 2.Activate all pull-up resistors.
+		*Ptr_Keypad->row.PORT |= (1<<Ptr_Keypad->row.pins[i]);
+		kick();
+	}
+
+	/* Columns */
+
+	for (uint8_t i=0; i<NUM_COL; i++) {
+		// 1.Configure all row_pins as output pins.
+		*Ptr_Keypad->col.DDR |= (1<<Ptr_Keypad->col.pins[i]);
+		kick();
+
+		// 2.Set all pins to logic one.
+		*Ptr_Keypad->col.PORT &= ~(1<<Ptr_Keypad->col.pins[i]);
+		kick();
+	}
+
+	/* Initialize key value */
+
+	Ptr_Keypad->key = '\0';
+
+	/* Initialize flag value */
+	Ptr_Keypad->Read_flag = false;
+
+	return;
+}
+
+/*=================================================================================================*/
+
+void Keypad_Read(KeyPad_4x4* Ptr_Keypad){
+	/* Idea: activate only one row then read all columns.
+	 * when a key is pressed i already know it's row and
+	 * it's column.
+	 * Note that: row is active low.
+	 */
+	for(uint8_t r=0; r<NUM_ROW; r++){
+		// 1.Deactivate all rows.
+		*Ptr_Keypad->row.PORT |= (1<<Ptr_Keypad->row.pins[0]);
+		*Ptr_Keypad->row.PORT |= (1<<Ptr_Keypad->row.pins[1]);
+		*Ptr_Keypad->row.PORT |= (1<<Ptr_Keypad->row.pins[2]);
+		*Ptr_Keypad->row.PORT |= (1<<Ptr_Keypad->row.pins[3]);
+
+		// 2.Activate specific row.
+		*Ptr_Keypad->row.PORT &= ~(1<<Ptr_Keypad->row.pins[r]);
+
+		// 3.Read all columns then return key value.
+		for(uint8_t c=0; c<NUM_COL; c++){
+			if(is_pressed(column_pin[c]) == true){
+				*key = map[r][c];
+				return;
+			}
+
+			// Insert kick for synchronization
+			kick();
+		}
+	}
+}

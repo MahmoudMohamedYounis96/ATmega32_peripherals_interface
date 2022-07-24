@@ -1,0 +1,22 @@
+/*
+ * main.c
+ *
+ *  Created on: Jul 16, 2022
+ *      Author: Mahmoud_Mohamed
+ */
+#include "keypad/keypad4x4.h"
+
+int main(void){
+
+	KeyPad_4x4 key;
+	uint8_t row_pins[4] = {PD0, PD1, PD2, PD3};
+	uint8_t col_pins[4] = {PC0, PC1, PC2, PC3};
+
+	Keypad_Cfg(&key, &DDRD, &PIND, &PORTD, row_pins, DDRC, PORTC, col_pins);
+
+	Keypad_Init(&key);
+
+	while(1);
+	return 0;
+}
+

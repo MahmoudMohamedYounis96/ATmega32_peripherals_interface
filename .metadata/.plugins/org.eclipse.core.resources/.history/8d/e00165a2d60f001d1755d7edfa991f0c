@@ -1,0 +1,22 @@
+/*
+ * External_interrupts.h
+ *
+ *  Created on: Jul 30, 2022
+ *      Author: Mahmoud_Mohamed
+ */
+
+#ifndef EXTERNAL_INTERRUPTS_H_
+#define EXTERNAL_INTERRUPTS_H_
+
+/*=========================== Includes ================================*/
+#include <avr/io.h>
+#include <util/delay.h>
+#include <avr/interrupt.h>
+
+/*=========================== Definitions ================================*/
+#ifndef kick
+#define Kick()	__asm__("nop");
+#endif /* Kick */
+
+
+#endif /* EXTERNAL_INTERRUPTS_H_ */

@@ -1,0 +1,13 @@
+/*
+ * External_interrupts.h
+ *
+ *  Created on: Jul 30, 2022
+ *      Author: Mahmoud_Mohamed
+ */
+
+#ifndef EXTERNAL_INTERRUPTS_H_
+#define EXTERNAL_INTERRUPTS_H_
+
+
+
+#endif /* EXTERNAL_INTERRUPTS_H_ */

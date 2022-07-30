@@ -31,15 +31,9 @@ int main(void){
 	lcd.Init(lcd.obj);
 
 	// print something.
-	int    a =  102;
-	char   c = ',';
-	double b = -9.89;
+	int a = 32000;
 
 	lcd.Print(lcd.obj, &a, _d);
-
-	lcd.Print(lcd.obj, &c, _c);
-
-	lcd.Print(lcd.obj, &b, _f);
 
 	while(1);
 

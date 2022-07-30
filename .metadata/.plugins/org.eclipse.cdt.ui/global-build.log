@@ -592,3 +592,635 @@ Data:         28 bytes (1.4% Full)
 
 Finished building: sizedummy
  
+07:57:44 **** Build of configuration Release for project GPIO_LCD ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:34: warning: overflow in implicit constant conversion
+Finished building: ../main.c
+ 
+Building target: GPIO_LCD.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,GPIO_LCD.map -mmcu=atmega32 -o "GPIO_LCD.elf"  ./lcd/lcd_alphanumeric_16x2.o  ./Monitor/Monitor.o  ./main.o   
+Finished building target: GPIO_LCD.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S GPIO_LCD.elf  >"GPIO_LCD.lss"
+Finished building: GPIO_LCD.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex GPIO_LCD.elf  "GPIO_LCD.hex"
+Finished building: GPIO_LCD.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex GPIO_LCD.elf  "GPIO_LCD.eep"
+Finished building: GPIO_LCD.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 GPIO_LCD.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    4360 bytes (13.3% Full)
+(.text + .data + .bootloader)
+
+Data:         12 bytes (0.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+**** Build of configuration Release for project Timer_0 ****
+
+Nothing to build for project Timer_0
+07:57:53 **** Incremental Build of configuration Release for project GPIO_LCD ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: GPIO_LCD.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,GPIO_LCD.map -mmcu=atmega32 -o "GPIO_LCD.elf"  ./lcd/lcd_alphanumeric_16x2.o  ./Monitor/Monitor.o  ./main.o   
+Finished building target: GPIO_LCD.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S GPIO_LCD.elf  >"GPIO_LCD.lss"
+Finished building: GPIO_LCD.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex GPIO_LCD.elf  "GPIO_LCD.hex"
+Finished building: GPIO_LCD.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex GPIO_LCD.elf  "GPIO_LCD.eep"
+Finished building: GPIO_LCD.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 GPIO_LCD.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    4368 bytes (13.3% Full)
+(.text + .data + .bootloader)
+
+Data:         12 bytes (0.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+**** Build of configuration Release for project Timer_0 ****
+
+Nothing to build for project Timer_0
+07:59:10 **** Incremental Build of configuration Release for project GPIO_LCD ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: GPIO_LCD.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,GPIO_LCD.map -mmcu=atmega32 -o "GPIO_LCD.elf"  ./lcd/lcd_alphanumeric_16x2.o  ./Monitor/Monitor.o  ./main.o   
+Finished building target: GPIO_LCD.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S GPIO_LCD.elf  >"GPIO_LCD.lss"
+Finished building: GPIO_LCD.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex GPIO_LCD.elf  "GPIO_LCD.hex"
+Finished building: GPIO_LCD.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex GPIO_LCD.elf  "GPIO_LCD.eep"
+Finished building: GPIO_LCD.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 GPIO_LCD.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    4310 bytes (13.2% Full)
+(.text + .data + .bootloader)
+
+Data:         12 bytes (0.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+**** Build of configuration Release for project Timer_0 ****
+
+Nothing to build for project Timer_0
+07:59:24 **** Incremental Build of configuration Release for project GPIO_LCD ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: GPIO_LCD.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,GPIO_LCD.map -mmcu=atmega32 -o "GPIO_LCD.elf"  ./lcd/lcd_alphanumeric_16x2.o  ./Monitor/Monitor.o  ./main.o   
+Finished building target: GPIO_LCD.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S GPIO_LCD.elf  >"GPIO_LCD.lss"
+Finished building: GPIO_LCD.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex GPIO_LCD.elf  "GPIO_LCD.hex"
+Finished building: GPIO_LCD.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex GPIO_LCD.elf  "GPIO_LCD.eep"
+Finished building: GPIO_LCD.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 GPIO_LCD.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    4310 bytes (13.2% Full)
+(.text + .data + .bootloader)
+
+Data:         12 bytes (0.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+**** Build of configuration Release for project Timer_0 ****
+
+Nothing to build for project Timer_0
+07:59:54 **** Incremental Build of configuration Release for project GPIO_LCD ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: GPIO_LCD.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,GPIO_LCD.map -mmcu=atmega32 -o "GPIO_LCD.elf"  ./lcd/lcd_alphanumeric_16x2.o  ./Monitor/Monitor.o  ./main.o   
+Finished building target: GPIO_LCD.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S GPIO_LCD.elf  >"GPIO_LCD.lss"
+Finished building: GPIO_LCD.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex GPIO_LCD.elf  "GPIO_LCD.hex"
+Finished building: GPIO_LCD.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex GPIO_LCD.elf  "GPIO_LCD.eep"
+Finished building: GPIO_LCD.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 GPIO_LCD.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    4304 bytes (13.1% Full)
+(.text + .data + .bootloader)
+
+Data:         12 bytes (0.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+**** Build of configuration Release for project Timer_0 ****
+
+Nothing to build for project Timer_0
+08:00:06 **** Incremental Build of configuration Release for project GPIO_LCD ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: GPIO_LCD.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,GPIO_LCD.map -mmcu=atmega32 -o "GPIO_LCD.elf"  ./lcd/lcd_alphanumeric_16x2.o  ./Monitor/Monitor.o  ./main.o   
+Finished building target: GPIO_LCD.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S GPIO_LCD.elf  >"GPIO_LCD.lss"
+Finished building: GPIO_LCD.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex GPIO_LCD.elf  "GPIO_LCD.hex"
+Finished building: GPIO_LCD.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex GPIO_LCD.elf  "GPIO_LCD.eep"
+Finished building: GPIO_LCD.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 GPIO_LCD.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    4304 bytes (13.1% Full)
+(.text + .data + .bootloader)
+
+Data:         12 bytes (0.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+**** Build of configuration Release for project Timer_0 ****
+
+Nothing to build for project Timer_0
+08:00:16 **** Incremental Build of configuration Release for project GPIO_LCD ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: GPIO_LCD.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,GPIO_LCD.map -mmcu=atmega32 -o "GPIO_LCD.elf"  ./lcd/lcd_alphanumeric_16x2.o  ./Monitor/Monitor.o  ./main.o   
+Finished building target: GPIO_LCD.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S GPIO_LCD.elf  >"GPIO_LCD.lss"
+Finished building: GPIO_LCD.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex GPIO_LCD.elf  "GPIO_LCD.hex"
+Finished building: GPIO_LCD.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex GPIO_LCD.elf  "GPIO_LCD.eep"
+Finished building: GPIO_LCD.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 GPIO_LCD.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    4304 bytes (13.1% Full)
+(.text + .data + .bootloader)
+
+Data:         12 bytes (0.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+**** Build of configuration Release for project Timer_0 ****
+
+Nothing to build for project Timer_0
+08:00:27 **** Incremental Build of configuration Release for project GPIO_LCD ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: GPIO_LCD.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,GPIO_LCD.map -mmcu=atmega32 -o "GPIO_LCD.elf"  ./lcd/lcd_alphanumeric_16x2.o  ./Monitor/Monitor.o  ./main.o   
+Finished building target: GPIO_LCD.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S GPIO_LCD.elf  >"GPIO_LCD.lss"
+Finished building: GPIO_LCD.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex GPIO_LCD.elf  "GPIO_LCD.hex"
+Finished building: GPIO_LCD.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex GPIO_LCD.elf  "GPIO_LCD.eep"
+Finished building: GPIO_LCD.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 GPIO_LCD.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    4304 bytes (13.1% Full)
+(.text + .data + .bootloader)
+
+Data:         12 bytes (0.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+**** Build of configuration Release for project Timer_0 ****
+
+Nothing to build for project Timer_0
+13:23:09 **** Build of configuration Release for project External_interrupts ****
+make all 
+Building file: ../External_interrupts/External_interrupts.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"External_interrupts/External_interrupts.d" -MT"External_interrupts/External_interrupts.d" -c -o "External_interrupts/External_interrupts.o" "../External_interrupts/External_interrupts.c"
+Finished building: ../External_interrupts/External_interrupts.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: External_interrupts.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,External_interrupts.map -mmcu=atmega32 -o "External_interrupts.elf"  ./External_interrupts/External_interrupts.o  ./main.o   
+Finished building target: External_interrupts.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S External_interrupts.elf  >"External_interrupts.lss"
+Finished building: External_interrupts.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex External_interrupts.elf  "External_interrupts.hex"
+Finished building: External_interrupts.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex External_interrupts.elf  "External_interrupts.eep"
+Finished building: External_interrupts.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 External_interrupts.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     280 bytes (0.9% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:33:03 **** Incremental Build of configuration Release for project External_interrupts ****
+make all 
+Building file: ../External_interrupts/External_interrupts.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"External_interrupts/External_interrupts.d" -MT"External_interrupts/External_interrupts.d" -c -o "External_interrupts/External_interrupts.o" "../External_interrupts/External_interrupts.c"
+In file included from ../External_interrupts/External_interrupts.c:7:
+../External_interrupts/External_interrupts.h: In function 'Enable_Global_Interrupt':
+../External_interrupts/External_interrupts.h:29: warning: implicit declaration of function 'kick'
+../External_interrupts/External_interrupts.h: In function 'Disable_Global_Interrupt':
+../External_interrupts/External_interrupts.h:32: warning: implicit declaration of function 'cei'
+Finished building: ../External_interrupts/External_interrupts.c
+ 
+Building target: External_interrupts.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,External_interrupts.map -mmcu=atmega32 -o "External_interrupts.elf"  ./External_interrupts/External_interrupts.o  ./main.o   
+Finished building target: External_interrupts.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S External_interrupts.elf  >"External_interrupts.lss"
+Finished building: External_interrupts.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex External_interrupts.elf  "External_interrupts.hex"
+Finished building: External_interrupts.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex External_interrupts.elf  "External_interrupts.eep"
+Finished building: External_interrupts.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 External_interrupts.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     316 bytes (1.0% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:33:20 **** Incremental Build of configuration Release for project External_interrupts ****
+make all 
+Building file: ../External_interrupts/External_interrupts.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"External_interrupts/External_interrupts.d" -MT"External_interrupts/External_interrupts.d" -c -o "External_interrupts/External_interrupts.o" "../External_interrupts/External_interrupts.c"
+In file included from ../External_interrupts/External_interrupts.c:7:
+../External_interrupts/External_interrupts.h: In function 'Disable_Global_Interrupt':
+../External_interrupts/External_interrupts.h:32: warning: implicit declaration of function 'cei'
+Finished building: ../External_interrupts/External_interrupts.c
+ 
+Building target: External_interrupts.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,External_interrupts.map -mmcu=atmega32 -o "External_interrupts.elf"  ./External_interrupts/External_interrupts.o  ./main.o   
+Finished building target: External_interrupts.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S External_interrupts.elf  >"External_interrupts.lss"
+Finished building: External_interrupts.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex External_interrupts.elf  "External_interrupts.hex"
+Finished building: External_interrupts.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex External_interrupts.elf  "External_interrupts.eep"
+Finished building: External_interrupts.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 External_interrupts.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     316 bytes (1.0% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:33:26 **** Incremental Build of configuration Release for project External_interrupts ****
+make all 
+Building file: ../External_interrupts/External_interrupts.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"External_interrupts/External_interrupts.d" -MT"External_interrupts/External_interrupts.d" -c -o "External_interrupts/External_interrupts.o" "../External_interrupts/External_interrupts.c"
+Finished building: ../External_interrupts/External_interrupts.c
+ 
+Building target: External_interrupts.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,External_interrupts.map -mmcu=atmega32 -o "External_interrupts.elf"  ./External_interrupts/External_interrupts.o  ./main.o   
+Finished building target: External_interrupts.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S External_interrupts.elf  >"External_interrupts.lss"
+Finished building: External_interrupts.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex External_interrupts.elf  "External_interrupts.hex"
+Finished building: External_interrupts.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex External_interrupts.elf  "External_interrupts.eep"
+Finished building: External_interrupts.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 External_interrupts.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     316 bytes (1.0% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:33:56 **** Incremental Build of configuration Release for project External_interrupts ****
+make all 
+Building file: ../External_interrupts/External_interrupts.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"External_interrupts/External_interrupts.d" -MT"External_interrupts/External_interrupts.d" -c -o "External_interrupts/External_interrupts.o" "../External_interrupts/External_interrupts.c"
+Finished building: ../External_interrupts/External_interrupts.c
+ 
+Building target: External_interrupts.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,External_interrupts.map -mmcu=atmega32 -o "External_interrupts.elf"  ./External_interrupts/External_interrupts.o  ./main.o   
+Finished building target: External_interrupts.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S External_interrupts.elf  >"External_interrupts.lss"
+Finished building: External_interrupts.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex External_interrupts.elf  "External_interrupts.hex"
+Finished building: External_interrupts.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex External_interrupts.elf  "External_interrupts.eep"
+Finished building: External_interrupts.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 External_interrupts.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     316 bytes (1.0% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:34:10 **** Incremental Build of configuration Release for project External_interrupts ****
+make all 
+Building file: ../External_interrupts/External_interrupts.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"External_interrupts/External_interrupts.d" -MT"External_interrupts/External_interrupts.d" -c -o "External_interrupts/External_interrupts.o" "../External_interrupts/External_interrupts.c"
+Finished building: ../External_interrupts/External_interrupts.c
+ 
+Building target: External_interrupts.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,External_interrupts.map -mmcu=atmega32 -o "External_interrupts.elf"  ./External_interrupts/External_interrupts.o  ./main.o   
+Finished building target: External_interrupts.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S External_interrupts.elf  >"External_interrupts.lss"
+Finished building: External_interrupts.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex External_interrupts.elf  "External_interrupts.hex"
+Finished building: External_interrupts.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex External_interrupts.elf  "External_interrupts.eep"
+Finished building: External_interrupts.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 External_interrupts.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     316 bytes (1.0% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:50:29 **** Incremental Build of configuration Release for project External_interrupts ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: External_interrupts.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,External_interrupts.map -mmcu=atmega32 -o "External_interrupts.elf"  ./External_interrupts/External_interrupts.o  ./main.o   
+Finished building target: External_interrupts.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S External_interrupts.elf  >"External_interrupts.lss"
+Finished building: External_interrupts.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex External_interrupts.elf  "External_interrupts.hex"
+Finished building: External_interrupts.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex External_interrupts.elf  "External_interrupts.eep"
+Finished building: External_interrupts.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 External_interrupts.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     470 bytes (1.4% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 

@@ -1,0 +1,97 @@
+/*
+ * timer_delay.c
+ *
+ *  Created on: Jul 31, 2022
+ *      Author: Mahmoud_Mohamed
+ */
+// Standard Libraries.
+#include <stdio.h>
+#include <stdint.h>
+#include <stdbool.h>
+
+// AVR AT_Mega32 Libraries.
+#include <avr/io.h>
+#include <avr/interrupt.h>
+
+// Local Header Files.
+#include "timer_delay.h"
+
+/*====================== Static variables ======================*/
+// This variable will be incremented every one micro second.
+static volatile uint32_t Overflow_Every_1us = 0;
+
+// this variable will be incremented every one milli second.
+static volatile uint32_t Overflow_Every_1ms = 0;
+
+// Flag to get the current state of Timer0.
+static TIMER0_ISBUSY Timer0_ISBusyFlag = NotBusy;
+
+// Flag to control timer overflow.
+static OVERFLOW_FLAG Timer0_Overflow_Flag = MILLI;
+
+/*====================== Private functions  ======================*/
+// Hardware Registers Set and Clear functions.
+static inline void Set_Bit(volatile uint8_t* reg, uint8_t bit){
+	*reg |=  (1<<bit);
+}
+
+static inline void Clear_Bit(volatile uint8_t* reg, uint8_t bit){
+	*reg &= ~(1<<bit);
+}
+
+// Overflow_Every_1us Variable Set, and Get functions.
+static inline   void   Set_Overflow_Every_1us(uint32_t value){
+	Overflow_Every_1us = value;
+}
+
+static inline uint32_t Get_Overflow_Every_1us(void){
+	return Overflow_Every_1us ;
+}
+
+// Overflow_Every_1ms Variable Set, and Get functions.
+static inline   void   Set_Overflow_Every_1ms(uint32_t value){
+	Overflow_Every_1ms = value;
+}
+
+static inline uint32_t Get_Overflow_Every_1ms(void){
+	return Overflow_Every_1ms ;
+}
+
+// Timer0_Overflow_Type_Flag Variable Set, and Get functions.
+static inline void Set_Timer0_Overflow_Flag(OVERFLOW_FLAG flag){
+	Timer0_Overflow_Flag = flag;
+}
+
+static inline OVERFLOW_FLAG Get_Timer0_Overflow_Flag(void){
+	return Timer0_Overflow_Flag ;
+}
+
+static inline TIMER0_ISBUSY Timer0_IsBusy(void){
+	return Timer0_ISBusyFlag;
+}
+
+static inline void Set_Timer0_IsBusyFlag(TIMER0_ISBUSY flag){
+	Timer0_ISBusyFlag = flag;
+}
+
+/*====================== Functions Declarations ======================*/
+void Timer0_Delay_us(uint32_t time){
+	// Select Flag to generate overflow every 1 micro second.
+	Set_Timer0_Overflow_Flag(MICRO);
+
+	// Set counter to zero.
+	Set_Overflow_Every_1us(0);
+
+	// Initialize timer0 to overflow every 1 micro second.
+}
+
+void Timer0_Delay_ms(uint32_t time){
+	// Select Flag to generate overflow every 1 milli second.
+	Set_Timer0_Overflow_Flag(MILLI);
+
+	// Set counter to zero.
+	Set_Overflow_Every_1ms(0);
+
+	// Initialize timer0 to overflow every 1 milli second.
+
+}

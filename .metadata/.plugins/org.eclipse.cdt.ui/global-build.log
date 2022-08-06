@@ -1,979 +1,761 @@
-02:02:06 **** Incremental Build of configuration Release for project GPIO_Keypad ****
+09:11:59 **** Incremental Build of configuration Release for project Hardware_Time_Delay ****
 make all 
-Building file: ../lcd/lcd_alphanumeric_16x2.c
+Building file: ../Timer_Delay/timer_delay.c
 Invoking: AVR Compiler
-avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"lcd/lcd_alphanumeric_16x2.d" -MT"lcd/lcd_alphanumeric_16x2.d" -c -o "lcd/lcd_alphanumeric_16x2.o" "../lcd/lcd_alphanumeric_16x2.c"
-../lcd/lcd_alphanumeric_16x2.c: In function 'lcd_alphnumeric_16x2_flush':
-../lcd/lcd_alphanumeric_16x2.c:388: warning: pointer targets in initialization differ in signedness
-../lcd/lcd_alphanumeric_16x2.c:390: warning: pointer targets in passing argument 2 of 'lcd_alphnumeric_16x2_send_string' differ in signedness
-Finished building: ../lcd/lcd_alphanumeric_16x2.c
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Timer_Delay/timer_delay.d" -MT"Timer_Delay/timer_delay.d" -c -o "Timer_Delay/timer_delay.o" "../Timer_Delay/timer_delay.c"
+In file included from ../Timer_Delay/timer_delay.c:7:
+../Timer_Delay/timer_delay.h:80: error: expected ')' before 'flag'
+../Timer_Delay/timer_delay.c: In function 'Timer0_Delay_us':
+../Timer_Delay/timer_delay.c:12: warning: implicit declaration of function 'Set_Timer0_Overflow_Type_Flag'
+../Timer_Delay/timer_delay.c:15: warning: implicit declaration of function 'Set_Overflow_Every_1us'
+../Timer_Delay/timer_delay.c: In function 'Timer0_Delay_ms':
+../Timer_Delay/timer_delay.c:25: warning: implicit declaration of function 'Set_Overflow_Every_1ms'
+make: *** [Timer_Delay/timer_delay.o] Error 1
+09:13:01 **** Incremental Build of configuration Release for project Hardware_Time_Delay ****
+make all 
+Building file: ../Timer_Delay/timer_delay.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Timer_Delay/timer_delay.d" -MT"Timer_Delay/timer_delay.d" -c -o "Timer_Delay/timer_delay.o" "../Timer_Delay/timer_delay.c"
+../Timer_Delay/timer_delay.c: In function 'Timer0_Delay_us':
+../Timer_Delay/timer_delay.c:12: warning: implicit declaration of function 'Set_Timer0_Overflow_Type_Flag'
+../Timer_Delay/timer_delay.c:15: warning: implicit declaration of function 'Set_Overflow_Every_1us'
+../Timer_Delay/timer_delay.c: In function 'Timer0_Delay_ms':
+../Timer_Delay/timer_delay.c:25: warning: implicit declaration of function 'Set_Overflow_Every_1ms'
+Finished building: ../Timer_Delay/timer_delay.c
  
-Building file: ../Monitor/Monitor.c
+Building target: Hardware_Time_Delay.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hardware_Time_Delay.map -mmcu=atmega32 -o "Hardware_Time_Delay.elf"  ./Timer_Delay/timer_delay.o  ./main.o   
+./Timer_Delay/timer_delay.o: In function `Timer0_Delay_ms':
+timer_delay.c:(.text.Timer0_Delay_ms+0x4): undefined reference to `Set_Timer0_Overflow_Type_Flag'
+timer_delay.c:(.text.Timer0_Delay_ms+0xc): undefined reference to `Set_Overflow_Every_1ms'
+./Timer_Delay/timer_delay.o: In function `Timer0_Delay_us':
+timer_delay.c:(.text.Timer0_Delay_us+0x4): undefined reference to `Set_Timer0_Overflow_Type_Flag'
+timer_delay.c:(.text.Timer0_Delay_us+0xc): undefined reference to `Set_Overflow_Every_1us'
+make: *** [Hardware_Time_Delay.elf] Error 1
+09:13:22 **** Incremental Build of configuration Release for project Hardware_Time_Delay ****
+make all 
+Building file: ../Timer_Delay/timer_delay.c
 Invoking: AVR Compiler
-avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Monitor/Monitor.d" -MT"Monitor/Monitor.d" -c -o "Monitor/Monitor.o" "../Monitor/Monitor.c"
-Finished building: ../Monitor/Monitor.c
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Timer_Delay/timer_delay.d" -MT"Timer_Delay/timer_delay.d" -c -o "Timer_Delay/timer_delay.o" "../Timer_Delay/timer_delay.c"
+../Timer_Delay/timer_delay.c: In function 'Timer0_Delay_us':
+../Timer_Delay/timer_delay.c:12: warning: implicit declaration of function 'Set_Timer0_Overflow_Type_Flag'
+../Timer_Delay/timer_delay.c:15: warning: implicit declaration of function 'Set_Overflow_Every_1us'
+../Timer_Delay/timer_delay.c: In function 'Timer0_Delay_ms':
+../Timer_Delay/timer_delay.c:25: warning: implicit declaration of function 'Set_Overflow_Every_1ms'
+Finished building: ../Timer_Delay/timer_delay.c
+ 
+Building target: Hardware_Time_Delay.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hardware_Time_Delay.map -mmcu=atmega32 -o "Hardware_Time_Delay.elf"  ./Timer_Delay/timer_delay.o  ./main.o   
+./Timer_Delay/timer_delay.o: In function `Timer0_Delay_ms':
+timer_delay.c:(.text.Timer0_Delay_ms+0x4): undefined reference to `Set_Timer0_Overflow_Type_Flag'
+timer_delay.c:(.text.Timer0_Delay_ms+0xc): undefined reference to `Set_Overflow_Every_1ms'
+./Timer_Delay/timer_delay.o: In function `Timer0_Delay_us':
+timer_delay.c:(.text.Timer0_Delay_us+0x4): undefined reference to `Set_Timer0_Overflow_Type_Flag'
+timer_delay.c:(.text.Timer0_Delay_us+0xc): undefined reference to `Set_Overflow_Every_1us'
+make: *** [Hardware_Time_Delay.elf] Error 1
+09:13:30 **** Incremental Build of configuration Release for project Hardware_Time_Delay ****
+make all 
+Building file: ../Timer_Delay/timer_delay.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Timer_Delay/timer_delay.d" -MT"Timer_Delay/timer_delay.d" -c -o "Timer_Delay/timer_delay.o" "../Timer_Delay/timer_delay.c"
+../Timer_Delay/timer_delay.c: In function 'Timer0_Delay_us':
+../Timer_Delay/timer_delay.c:12: warning: implicit declaration of function 'Set_Timer0_Overflow_Type_Flag'
+../Timer_Delay/timer_delay.c:15: warning: implicit declaration of function 'Set_Overflow_Every_1us'
+../Timer_Delay/timer_delay.c: In function 'Timer0_Delay_ms':
+../Timer_Delay/timer_delay.c:25: warning: implicit declaration of function 'Set_Overflow_Every_1ms'
+../Timer_Delay/timer_delay.c: At top level:
+../Timer_Delay/timer_delay.h:34: warning: 'Timer0_ISBusyFlag' defined but not used
+Finished building: ../Timer_Delay/timer_delay.c
+ 
+Building target: Hardware_Time_Delay.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hardware_Time_Delay.map -mmcu=atmega32 -o "Hardware_Time_Delay.elf"  ./Timer_Delay/timer_delay.o  ./main.o   
+./Timer_Delay/timer_delay.o: In function `Timer0_Delay_ms':
+timer_delay.c:(.text.Timer0_Delay_ms+0x4): undefined reference to `Set_Timer0_Overflow_Type_Flag'
+timer_delay.c:(.text.Timer0_Delay_ms+0xc): undefined reference to `Set_Overflow_Every_1ms'
+./Timer_Delay/timer_delay.o: In function `Timer0_Delay_us':
+timer_delay.c:(.text.Timer0_Delay_us+0x4): undefined reference to `Set_Timer0_Overflow_Type_Flag'
+timer_delay.c:(.text.Timer0_Delay_us+0xc): undefined reference to `Set_Overflow_Every_1us'
+make: *** [Hardware_Time_Delay.elf] Error 1
+09:15:34 **** Incremental Build of configuration Release for project Hardware_Time_Delay ****
+make all 
+Building file: ../Timer_Delay/timer_delay.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Timer_Delay/timer_delay.d" -MT"Timer_Delay/timer_delay.d" -c -o "Timer_Delay/timer_delay.o" "../Timer_Delay/timer_delay.c"
+Finished building: ../Timer_Delay/timer_delay.c
+ 
+Building target: Hardware_Time_Delay.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hardware_Time_Delay.map -mmcu=atmega32 -o "Hardware_Time_Delay.elf"  ./Timer_Delay/timer_delay.o  ./main.o   
+Finished building target: Hardware_Time_Delay.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Hardware_Time_Delay.elf  >"Hardware_Time_Delay.lss"
+Finished building: Hardware_Time_Delay.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Hardware_Time_Delay.elf  "Hardware_Time_Delay.hex"
+Finished building: Hardware_Time_Delay.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Hardware_Time_Delay.elf  "Hardware_Time_Delay.eep"
+Finished building: Hardware_Time_Delay.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Hardware_Time_Delay.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     196 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          9 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+09:22:05 **** Incremental Build of configuration Release for project Hardware_Time_Delay ****
+make all 
+Building file: ../Timer_Delay/timer_delay.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Timer_Delay/timer_delay.d" -MT"Timer_Delay/timer_delay.d" -c -o "Timer_Delay/timer_delay.o" "../Timer_Delay/timer_delay.c"
+Finished building: ../Timer_Delay/timer_delay.c
+ 
+Building target: Hardware_Time_Delay.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hardware_Time_Delay.map -mmcu=atmega32 -o "Hardware_Time_Delay.elf"  ./Timer_Delay/timer_delay.o  ./main.o   
+Finished building target: Hardware_Time_Delay.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Hardware_Time_Delay.elf  >"Hardware_Time_Delay.lss"
+Finished building: Hardware_Time_Delay.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Hardware_Time_Delay.elf  "Hardware_Time_Delay.hex"
+Finished building: Hardware_Time_Delay.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Hardware_Time_Delay.elf  "Hardware_Time_Delay.eep"
+Finished building: Hardware_Time_Delay.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Hardware_Time_Delay.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     196 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          9 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+09:24:43 **** Incremental Build of configuration Release for project Hardware_Time_Delay ****
+make all 
+Building file: ../Timer_Delay/timer_delay.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Timer_Delay/timer_delay.d" -MT"Timer_Delay/timer_delay.d" -c -o "Timer_Delay/timer_delay.o" "../Timer_Delay/timer_delay.c"
+Finished building: ../Timer_Delay/timer_delay.c
+ 
+Building target: Hardware_Time_Delay.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hardware_Time_Delay.map -mmcu=atmega32 -o "Hardware_Time_Delay.elf"  ./Timer_Delay/timer_delay.o  ./main.o   
+Finished building target: Hardware_Time_Delay.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Hardware_Time_Delay.elf  >"Hardware_Time_Delay.lss"
+Finished building: Hardware_Time_Delay.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Hardware_Time_Delay.elf  "Hardware_Time_Delay.hex"
+Finished building: Hardware_Time_Delay.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Hardware_Time_Delay.elf  "Hardware_Time_Delay.eep"
+Finished building: Hardware_Time_Delay.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Hardware_Time_Delay.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     196 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          9 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+09:25:15 **** Incremental Build of configuration Release for project Hardware_Time_Delay ****
+make all 
+Building file: ../Timer_Delay/timer_delay.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Timer_Delay/timer_delay.d" -MT"Timer_Delay/timer_delay.d" -c -o "Timer_Delay/timer_delay.o" "../Timer_Delay/timer_delay.c"
+Finished building: ../Timer_Delay/timer_delay.c
+ 
+Building target: Hardware_Time_Delay.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hardware_Time_Delay.map -mmcu=atmega32 -o "Hardware_Time_Delay.elf"  ./Timer_Delay/timer_delay.o  ./main.o   
+Finished building target: Hardware_Time_Delay.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Hardware_Time_Delay.elf  >"Hardware_Time_Delay.lss"
+Finished building: Hardware_Time_Delay.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Hardware_Time_Delay.elf  "Hardware_Time_Delay.hex"
+Finished building: Hardware_Time_Delay.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Hardware_Time_Delay.elf  "Hardware_Time_Delay.eep"
+Finished building: Hardware_Time_Delay.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Hardware_Time_Delay.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     196 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          9 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+09:39:24 **** Incremental Build of configuration Release for project Hardware_Time_Delay ****
+make all 
+Building file: ../Timer_Delay/timer_delay.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Timer_Delay/timer_delay.d" -MT"Timer_Delay/timer_delay.d" -c -o "Timer_Delay/timer_delay.o" "../Timer_Delay/timer_delay.c"
+In file included from ../Timer_Delay/timer_delay.c:17:
+../Timer_Delay/timer_delay.h: In function '__vector_11':
+../Timer_Delay/timer_delay.h:32: warning: implicit declaration of function 'Get_Timer0_Overflow_Flag'
+../Timer_Delay/timer_delay.h:34: error: 'Overflow_Every_1ms' undeclared (first use in this function)
+../Timer_Delay/timer_delay.h:34: error: (Each undeclared identifier is reported only once
+../Timer_Delay/timer_delay.h:34: error: for each function it appears in.)
+../Timer_Delay/timer_delay.c: At top level:
+../Timer_Delay/timer_delay.c:90: error: conflicting types for 'Get_Timer0_Overflow_Flag'
+../Timer_Delay/timer_delay.h:32: error: previous implicit declaration of 'Get_Timer0_Overflow_Flag' was here
+make: *** [Timer_Delay/timer_delay.o] Error 1
+09:41:21 **** Incremental Build of configuration Release for project Hardware_Time_Delay ****
+make all 
+Building file: ../Timer_Delay/timer_delay.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Timer_Delay/timer_delay.d" -MT"Timer_Delay/timer_delay.d" -c -o "Timer_Delay/timer_delay.o" "../Timer_Delay/timer_delay.c"
+In file included from ../Timer_Delay/timer_delay.c:17:
+../Timer_Delay/timer_delay.h: In function '__vector_11':
+../Timer_Delay/timer_delay.h:32: warning: implicit declaration of function 'Get_Timer0_Overflow_Flag'
+../Timer_Delay/timer_delay.h:34: error: 'Overflow_Every_1ms' undeclared (first use in this function)
+../Timer_Delay/timer_delay.h:34: error: (Each undeclared identifier is reported only once
+../Timer_Delay/timer_delay.h:34: error: for each function it appears in.)
+../Timer_Delay/timer_delay.c: At top level:
+../Timer_Delay/timer_delay.c:90: error: conflicting types for 'Get_Timer0_Overflow_Flag'
+../Timer_Delay/timer_delay.h:32: error: previous implicit declaration of 'Get_Timer0_Overflow_Flag' was here
+../Timer_Delay/timer_delay.c: In function 'Get_Timer0_Overflow_Flag':
+../Timer_Delay/timer_delay.c:91: warning: 'Timer0_Overflow_Flag' is static but used in inline function 'Get_Timer0_Overflow_Flag' which is not static
+make: *** [Timer_Delay/timer_delay.o] Error 1
+09:41:30 **** Incremental Build of configuration Release for project Hardware_Time_Delay ****
+make all 
+Building file: ../Timer_Delay/timer_delay.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Timer_Delay/timer_delay.d" -MT"Timer_Delay/timer_delay.d" -c -o "Timer_Delay/timer_delay.o" "../Timer_Delay/timer_delay.c"
+In file included from ../Timer_Delay/timer_delay.c:17:
+../Timer_Delay/timer_delay.h: In function '__vector_11':
+../Timer_Delay/timer_delay.h:32: warning: implicit declaration of function 'Get_Timer0_Overflow_Flag'
+../Timer_Delay/timer_delay.h:34: error: 'Overflow_Every_1ms' undeclared (first use in this function)
+../Timer_Delay/timer_delay.h:34: error: (Each undeclared identifier is reported only once
+../Timer_Delay/timer_delay.h:34: error: for each function it appears in.)
+../Timer_Delay/timer_delay.c: At top level:
+../Timer_Delay/timer_delay.c:90: error: conflicting types for 'Get_Timer0_Overflow_Flag'
+../Timer_Delay/timer_delay.h:32: error: previous implicit declaration of 'Get_Timer0_Overflow_Flag' was here
+make: *** [Timer_Delay/timer_delay.o] Error 1
+09:41:54 **** Incremental Build of configuration Release for project Hardware_Time_Delay ****
+make all 
+Building file: ../Timer_Delay/timer_delay.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Timer_Delay/timer_delay.d" -MT"Timer_Delay/timer_delay.d" -c -o "Timer_Delay/timer_delay.o" "../Timer_Delay/timer_delay.c"
+In file included from ../Timer_Delay/timer_delay.c:17:
+../Timer_Delay/timer_delay.h: In function '__vector_11':
+../Timer_Delay/timer_delay.h:37: error: 'Overflow_Every_1ms' undeclared (first use in this function)
+../Timer_Delay/timer_delay.h:37: error: (Each undeclared identifier is reported only once
+../Timer_Delay/timer_delay.h:37: error: for each function it appears in.)
+make: *** [Timer_Delay/timer_delay.o] Error 1
+09:43:37 **** Incremental Build of configuration Release for project Hardware_Time_Delay ****
+make all 
+Building file: ../Timer_Delay/timer_delay.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Timer_Delay/timer_delay.d" -MT"Timer_Delay/timer_delay.d" -c -o "Timer_Delay/timer_delay.o" "../Timer_Delay/timer_delay.c"
+In file included from ../Timer_Delay/timer_delay.c:17:
+../Timer_Delay/timer_delay.h:32: error: multiple storage classes in declaration specifiers
+../Timer_Delay/timer_delay.h:33: error: multiple storage classes in declaration specifiers
+../Timer_Delay/timer_delay.c:77: error: static declaration of 'Increment_Overflow_Every_1ms' follows non-static declaration
+../Timer_Delay/timer_delay.h:33: error: previous declaration of 'Increment_Overflow_Every_1ms' was here
+../Timer_Delay/timer_delay.c:90: error: static declaration of 'Get_Timer0_Overflow_Flag' follows non-static declaration
+../Timer_Delay/timer_delay.h:32: error: previous declaration of 'Get_Timer0_Overflow_Flag' was here
+../Timer_Delay/timer_delay.h:33: warning: inline function 'Increment_Overflow_Every_1ms' declared but never defined
+../Timer_Delay/timer_delay.h:32: warning: inline function 'Get_Timer0_Overflow_Flag' declared but never defined
+make: *** [Timer_Delay/timer_delay.o] Error 1
+09:43:56 **** Incremental Build of configuration Release for project Hardware_Time_Delay ****
+make all 
+Building file: ../Timer_Delay/timer_delay.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Timer_Delay/timer_delay.d" -MT"Timer_Delay/timer_delay.d" -c -o "Timer_Delay/timer_delay.o" "../Timer_Delay/timer_delay.c"
+../Timer_Delay/timer_delay.c:77: error: static declaration of 'Increment_Overflow_Every_1ms' follows non-static declaration
+../Timer_Delay/timer_delay.h:33: error: previous declaration of 'Increment_Overflow_Every_1ms' was here
+../Timer_Delay/timer_delay.c:90: error: static declaration of 'Get_Timer0_Overflow_Flag' follows non-static declaration
+../Timer_Delay/timer_delay.h:32: error: previous declaration of 'Get_Timer0_Overflow_Flag' was here
+../Timer_Delay/timer_delay.h:32: warning: inline function 'Get_Timer0_Overflow_Flag' declared but never defined
+make: *** [Timer_Delay/timer_delay.o] Error 1
+09:44:09 **** Incremental Build of configuration Release for project Hardware_Time_Delay ****
+make all 
+Building file: ../Timer_Delay/timer_delay.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Timer_Delay/timer_delay.d" -MT"Timer_Delay/timer_delay.d" -c -o "Timer_Delay/timer_delay.o" "../Timer_Delay/timer_delay.c"
+Finished building: ../Timer_Delay/timer_delay.c
+ 
+Building target: Hardware_Time_Delay.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hardware_Time_Delay.map -mmcu=atmega32 -o "Hardware_Time_Delay.elf"  ./Timer_Delay/timer_delay.o  ./main.o   
+Finished building target: Hardware_Time_Delay.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Hardware_Time_Delay.elf  >"Hardware_Time_Delay.lss"
+Finished building: Hardware_Time_Delay.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Hardware_Time_Delay.elf  "Hardware_Time_Delay.hex"
+Finished building: Hardware_Time_Delay.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Hardware_Time_Delay.elf  "Hardware_Time_Delay.eep"
+Finished building: Hardware_Time_Delay.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Hardware_Time_Delay.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     352 bytes (1.1% Full)
+(.text + .data + .bootloader)
+
+Data:         11 bytes (0.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+09:45:57 **** Incremental Build of configuration Release for project Hardware_Time_Delay ****
+make all 
+Building file: ../Timer_Delay/timer_delay.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Timer_Delay/timer_delay.d" -MT"Timer_Delay/timer_delay.d" -c -o "Timer_Delay/timer_delay.o" "../Timer_Delay/timer_delay.c"
+Finished building: ../Timer_Delay/timer_delay.c
  
 Building file: ../main.c
 Invoking: AVR Compiler
 avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
-In file included from ../Monitor/Monitor.h:12,
-                 from ../main.c:8:
-../Monitor/../lcd/lcd_alphanumeric_16x2.h:40: error: expected '=', ',', ';', 'asm' or '__attribute__' before '*' token
+../Timer_Delay/timer_delay.h:30: warning: 'Get_Timer0_Overflow_Flag' used but never defined
+../Timer_Delay/timer_delay.h:31: warning: 'Increment_Overflow_Every_1ms' used but never defined
+Finished building: ../main.c
+ 
+Building target: Hardware_Time_Delay.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hardware_Time_Delay.map -mmcu=atmega32 -o "Hardware_Time_Delay.elf"  ./Timer_Delay/timer_delay.o  ./main.o   
+./main.o: In function `__vector_11':
+main.c:(.text.__vector_11+0x0): multiple definition of `__vector_11'
+./Timer_Delay/timer_delay.o:timer_delay.c:(.text.__vector_11+0x0): first defined here
+./main.o: In function `__vector_11':
+main.c:(.text.__vector_11+0x22): undefined reference to `Get_Timer0_Overflow_Flag'
+main.c:(.text.__vector_11+0x2a): undefined reference to `Increment_Overflow_Every_1ms'
+make: *** [Hardware_Time_Delay.elf] Error 1
+12:58:17 **** Incremental Build of configuration Release for project Hardware_Time_Delay ****
+make all 
+Building file: ../Timer_Delay/timer_delay.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Timer_Delay/timer_delay.d" -MT"Timer_Delay/timer_delay.d" -c -o "Timer_Delay/timer_delay.o" "../Timer_Delay/timer_delay.c"
+../Timer_Delay/timer_delay.c:21: error: static declaration of 'Overflow_Every_1us' follows non-static declaration
+../Timer_Delay/timer_delay.h:28: error: previous declaration of 'Overflow_Every_1us' was here
+../Timer_Delay/timer_delay.c:24: error: static declaration of 'Overflow_Every_1ms' follows non-static declaration
+../Timer_Delay/timer_delay.h:27: error: previous declaration of 'Overflow_Every_1ms' was here
+../Timer_Delay/timer_delay.c:26: error: static declaration of 'Timer0_Overflow_Flag' follows non-static declaration
+../Timer_Delay/timer_delay.h:29: error: previous declaration of 'Timer0_Overflow_Flag' was here
+../Timer_Delay/timer_delay.c: In function 'Timer0_Init':
+../Timer_Delay/timer_delay.c:30: warning: implicit declaration of function 'Get_Timer0_Overflow_Flag'
+../Timer_Delay/timer_delay.c: In function 'Timer0_Delay_us':
+../Timer_Delay/timer_delay.c:58: warning: implicit declaration of function 'Set_Timer0_Overflow_Flag'
+../Timer_Delay/timer_delay.c:61: warning: implicit declaration of function 'Set_Overflow_Every_1us'
+make: *** [Timer_Delay/timer_delay.o] Error 1
+12:59:06 **** Incremental Build of configuration Release for project Hardware_Time_Delay ****
+make all 
+Building file: ../Timer_Delay/timer_delay.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Timer_Delay/timer_delay.d" -MT"Timer_Delay/timer_delay.d" -c -o "Timer_Delay/timer_delay.o" "../Timer_Delay/timer_delay.c"
+In file included from ../Timer_Delay/timer_delay.c:17:
+../Timer_Delay/timer_delay.h:27: error: multiple storage classes in declaration specifiers
+../Timer_Delay/timer_delay.c:21: error: static declaration of 'Overflow_Every_1us' follows non-static declaration
+../Timer_Delay/timer_delay.h:28: error: previous declaration of 'Overflow_Every_1us' was here
+../Timer_Delay/timer_delay.c:24: error: static declaration of 'Overflow_Every_1ms' follows non-static declaration
+../Timer_Delay/timer_delay.h:27: error: previous declaration of 'Overflow_Every_1ms' was here
+../Timer_Delay/timer_delay.c:26: error: static declaration of 'Timer0_Overflow_Flag' follows non-static declaration
+../Timer_Delay/timer_delay.h:29: error: previous declaration of 'Timer0_Overflow_Flag' was here
+../Timer_Delay/timer_delay.c: In function 'Timer0_Delay_us':
+../Timer_Delay/timer_delay.c:58: warning: implicit declaration of function 'Set_Timer0_Overflow_Flag'
+../Timer_Delay/timer_delay.c:61: warning: implicit declaration of function 'Set_Overflow_Every_1us'
+make: *** [Timer_Delay/timer_delay.o] Error 1
+12:59:50 **** Incremental Build of configuration Release for project Hardware_Time_Delay ****
+make all 
+Building file: ../Timer_Delay/timer_delay.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Timer_Delay/timer_delay.d" -MT"Timer_Delay/timer_delay.d" -c -o "Timer_Delay/timer_delay.o" "../Timer_Delay/timer_delay.c"
+Finished building: ../Timer_Delay/timer_delay.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Hardware_Time_Delay.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hardware_Time_Delay.map -mmcu=atmega32 -o "Hardware_Time_Delay.elf"  ./Timer_Delay/timer_delay.o  ./main.o   
+./main.o: In function `__vector_11':
+main.c:(.text.__vector_11+0x0): multiple definition of `__vector_11'
+./Timer_Delay/timer_delay.o:timer_delay.c:(.text.__vector_11+0x0): first defined here
+make: *** [Hardware_Time_Delay.elf] Error 1
+13:00:30 **** Incremental Build of configuration Release for project Hardware_Time_Delay ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+../main.c:27: error: redefinition of '__vector_11'
+../Timer_Delay/timer_delay.h:32: error: previous definition of '__vector_11' was here
 make: *** [main.o] Error 1
-02:02:54 **** Incremental Build of configuration Release for project GPIO_Keypad ****
+13:00:49 **** Incremental Build of configuration Release for project Hardware_Time_Delay ****
 make all 
-Building file: ../lcd/lcd_alphanumeric_16x2.c
+Building file: ../Timer_Delay/timer_delay.c
 Invoking: AVR Compiler
-avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"lcd/lcd_alphanumeric_16x2.d" -MT"lcd/lcd_alphanumeric_16x2.d" -c -o "lcd/lcd_alphanumeric_16x2.o" "../lcd/lcd_alphanumeric_16x2.c"
-In file included from ../lcd/lcd_alphanumeric_16x2.c:9:
-../lcd/lcd_alphanumeric_16x2.h:45: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'typedef'
-../lcd/lcd_alphanumeric_16x2.h:60: error: expected specifier-qualifier-list before 'REGISTER'
-../lcd/lcd_alphanumeric_16x2.h:126: error: expected declaration specifiers or '...' before 'REGISTER'
-../lcd/lcd_alphanumeric_16x2.h:126: error: expected declaration specifiers or '...' before 'REGISTER'
-../lcd/lcd_alphanumeric_16x2.h:127: error: expected declaration specifiers or '...' before 'REGISTER'
-../lcd/lcd_alphanumeric_16x2.h:127: error: expected declaration specifiers or '...' before 'REGISTER'
-../lcd/lcd_alphanumeric_16x2.c:22: error: expected declaration specifiers or '...' before 'REGISTER'
-../lcd/lcd_alphanumeric_16x2.c:22: error: expected declaration specifiers or '...' before 'REGISTER'
-../lcd/lcd_alphanumeric_16x2.c:23: error: expected declaration specifiers or '...' before 'REGISTER'
-../lcd/lcd_alphanumeric_16x2.c:23: error: expected declaration specifiers or '...' before 'REGISTER'
-../lcd/lcd_alphanumeric_16x2.c: In function 'lcd_alphnumeric_16x2_cfg':
-../lcd/lcd_alphanumeric_16x2.c:28: error: 'DATA' has no member named 'DDR'
-../lcd/lcd_alphanumeric_16x2.c:28: error: 'data_ddr' undeclared (first use in this function)
-../lcd/lcd_alphanumeric_16x2.c:28: error: (Each undeclared identifier is reported only once
-../lcd/lcd_alphanumeric_16x2.c:28: error: for each function it appears in.)
-../lcd/lcd_alphanumeric_16x2.c:29: error: 'DATA' has no member named 'PRT'
-../lcd/lcd_alphanumeric_16x2.c:29: error: 'data_port' undeclared (first use in this function)
-../lcd/lcd_alphanumeric_16x2.c:31: error: 'DATA' has no member named 'pins'
-../lcd/lcd_alphanumeric_16x2.c:35: error: 'CONTROL' has no member named 'DDR'
-../lcd/lcd_alphanumeric_16x2.c:35: error: 'control_ddr' undeclared (first use in this function)
-../lcd/lcd_alphanumeric_16x2.c:36: error: 'CONTROL' has no member named 'PRT'
-../lcd/lcd_alphanumeric_16x2.c:36: error: 'control_port' undeclared (first use in this function)
-../lcd/lcd_alphanumeric_16x2.c:37: error: 'CONTROL' has no member named 'RS'
-../lcd/lcd_alphanumeric_16x2.c:38: error: 'CONTROL' has no member named 'EN'
-../lcd/lcd_alphanumeric_16x2.c: In function 'lcd_alphnumeric_16x2_init':
-../lcd/lcd_alphanumeric_16x2.c:55: error: 'DATA' has no member named 'DDR'
-../lcd/lcd_alphanumeric_16x2.c:55: error: 'DATA' has no member named 'pins'
-../lcd/lcd_alphanumeric_16x2.c:55: error: 'DATA' has no member named 'pins'
-../lcd/lcd_alphanumeric_16x2.c:55: error: 'DATA' has no member named 'pins'
-../lcd/lcd_alphanumeric_16x2.c:55: error: 'DATA' has no member named 'pins'
-../lcd/lcd_alphanumeric_16x2.c:57: error: 'DATA' has no member named 'PRT'
-../lcd/lcd_alphanumeric_16x2.c:57: error: 'DATA' has no member named 'pins'
-../lcd/lcd_alphanumeric_16x2.c:57: error: 'DATA' has no member named 'pins'
-../lcd/lcd_alphanumeric_16x2.c:57: error: 'DATA' has no member named 'pins'
-../lcd/lcd_alphanumeric_16x2.c:57: error: 'DATA' has no member named 'pins'
-../lcd/lcd_alphanumeric_16x2.c:61: error: 'CONTROL' has no member named 'DDR'
-../lcd/lcd_alphanumeric_16x2.c:61: error: 'CONTROL' has no member named 'RS'
-../lcd/lcd_alphanumeric_16x2.c:61: error: 'CONTROL' has no member named 'EN'
-../lcd/lcd_alphanumeric_16x2.c:63: error: 'CONTROL' has no member named 'PRT'
-../lcd/lcd_alphanumeric_16x2.c:63: error: 'CONTROL' has no member named 'RS'
-../lcd/lcd_alphanumeric_16x2.c:63: error: 'CONTROL' has no member named 'EN'
-../lcd/lcd_alphanumeric_16x2.c: In function 'lcd_alphnumeric_16x2_send_CMD':
-../lcd/lcd_alphanumeric_16x2.c:109: error: 'DATA' has no member named 'PRT'
-../lcd/lcd_alphanumeric_16x2.c:109: error: 'DATA' has no member named 'pins'
-../lcd/lcd_alphanumeric_16x2.c:112: error: 'DATA' has no member named 'PRT'
-../lcd/lcd_alphanumeric_16x2.c:112: error: 'DATA' has no member named 'pins'
-../lcd/lcd_alphanumeric_16x2.c:121: error: 'CONTROL' has no member named 'PRT'
-../lcd/lcd_alphanumeric_16x2.c:121: error: 'CONTROL' has no member named 'RS'
-../lcd/lcd_alphanumeric_16x2.c:124: error: 'CONTROL' has no member named 'PRT'
-../lcd/lcd_alphanumeric_16x2.c:124: error: 'CONTROL' has no member named 'EN'
-../lcd/lcd_alphanumeric_16x2.c:126: error: 'CONTROL' has no member named 'PRT'
-../lcd/lcd_alphanumeric_16x2.c:126: error: 'CONTROL' has no member named 'EN'
-../lcd/lcd_alphanumeric_16x2.c:135: error: 'DATA' has no member named 'PRT'
-../lcd/lcd_alphanumeric_16x2.c:135: error: 'DATA' has no member named 'pins'
-../lcd/lcd_alphanumeric_16x2.c:138: error: 'DATA' has no member named 'PRT'
-../lcd/lcd_alphanumeric_16x2.c:138: error: 'DATA' has no member named 'pins'
-../lcd/lcd_alphanumeric_16x2.c:147: error: 'CONTROL' has no member named 'PRT'
-../lcd/lcd_alphanumeric_16x2.c:147: error: 'CONTROL' has no member named 'EN'
-../lcd/lcd_alphanumeric_16x2.c:149: error: 'CONTROL' has no member named 'PRT'
-../lcd/lcd_alphanumeric_16x2.c:149: error: 'CONTROL' has no member named 'EN'
-../lcd/lcd_alphanumeric_16x2.c: In function 'lcd_alphnumeric_16x2_send_char':
-../lcd/lcd_alphanumeric_16x2.c:174: error: 'DATA' has no member named 'PRT'
-../lcd/lcd_alphanumeric_16x2.c:174: error: 'DATA' has no member named 'pins'
-../lcd/lcd_alphanumeric_16x2.c:177: error: 'DATA' has no member named 'PRT'
-../lcd/lcd_alphanumeric_16x2.c:177: error: 'DATA' has no member named 'pins'
-../lcd/lcd_alphanumeric_16x2.c:186: error: 'CONTROL' has no member named 'PRT'
-../lcd/lcd_alphanumeric_16x2.c:186: error: 'CONTROL' has no member named 'RS'
-../lcd/lcd_alphanumeric_16x2.c:189: error: 'CONTROL' has no member named 'PRT'
-../lcd/lcd_alphanumeric_16x2.c:189: error: 'CONTROL' has no member named 'EN'
-../lcd/lcd_alphanumeric_16x2.c:191: error: 'CONTROL' has no member named 'PRT'
-../lcd/lcd_alphanumeric_16x2.c:191: error: 'CONTROL' has no member named 'EN'
-../lcd/lcd_alphanumeric_16x2.c:200: error: 'DATA' has no member named 'PRT'
-../lcd/lcd_alphanumeric_16x2.c:200: error: 'DATA' has no member named 'pins'
-../lcd/lcd_alphanumeric_16x2.c:203: error: 'DATA' has no member named 'PRT'
-../lcd/lcd_alphanumeric_16x2.c:203: error: 'DATA' has no member named 'pins'
-../lcd/lcd_alphanumeric_16x2.c:212: error: 'CONTROL' has no member named 'PRT'
-../lcd/lcd_alphanumeric_16x2.c:212: error: 'CONTROL' has no member named 'EN'
-../lcd/lcd_alphanumeric_16x2.c:214: error: 'CONTROL' has no member named 'PRT'
-../lcd/lcd_alphanumeric_16x2.c:214: error: 'CONTROL' has no member named 'EN'
-../lcd/lcd_alphanumeric_16x2.c: In function 'lcd_alphnumeric_16x2_flush':
-../lcd/lcd_alphanumeric_16x2.c:388: warning: pointer targets in initialization differ in signedness
-../lcd/lcd_alphanumeric_16x2.c:390: warning: pointer targets in passing argument 2 of 'lcd_alphnumeric_16x2_send_string' differ in signedness
-make: *** [lcd/lcd_alphanumeric_16x2.o] Error 1
-02:03:11 **** Incremental Build of configuration Release for project GPIO_Keypad ****
-make all 
-Building file: ../lcd/lcd_alphanumeric_16x2.c
-Invoking: AVR Compiler
-avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"lcd/lcd_alphanumeric_16x2.d" -MT"lcd/lcd_alphanumeric_16x2.d" -c -o "lcd/lcd_alphanumeric_16x2.o" "../lcd/lcd_alphanumeric_16x2.c"
-../lcd/lcd_alphanumeric_16x2.c: In function 'lcd_alphnumeric_16x2_flush':
-../lcd/lcd_alphanumeric_16x2.c:388: warning: pointer targets in initialization differ in signedness
-../lcd/lcd_alphanumeric_16x2.c:390: warning: pointer targets in passing argument 2 of 'lcd_alphnumeric_16x2_send_string' differ in signedness
-Finished building: ../lcd/lcd_alphanumeric_16x2.c
- 
-Building file: ../Monitor/Monitor.c
-Invoking: AVR Compiler
-avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Monitor/Monitor.d" -MT"Monitor/Monitor.d" -c -o "Monitor/Monitor.o" "../Monitor/Monitor.c"
-Finished building: ../Monitor/Monitor.c
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Timer_Delay/timer_delay.d" -MT"Timer_Delay/timer_delay.d" -c -o "Timer_Delay/timer_delay.o" "../Timer_Delay/timer_delay.c"
+Finished building: ../Timer_Delay/timer_delay.c
  
 Building file: ../main.c
 Invoking: AVR Compiler
 avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
-In file included from ../Monitor/Monitor.h:12,
-                 from ../main.c:8:
-../Monitor/../lcd/lcd_alphanumeric_16x2.h:40: error: expected '=', ',', ';', 'asm' or '__attribute__' before '*' token
+Finished building: ../main.c
+ 
+Building target: Hardware_Time_Delay.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hardware_Time_Delay.map -mmcu=atmega32 -o "Hardware_Time_Delay.elf"  ./Timer_Delay/timer_delay.o  ./main.o   
+Finished building target: Hardware_Time_Delay.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Hardware_Time_Delay.elf  >"Hardware_Time_Delay.lss"
+Finished building: Hardware_Time_Delay.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Hardware_Time_Delay.elf  "Hardware_Time_Delay.hex"
+Finished building: Hardware_Time_Delay.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Hardware_Time_Delay.elf  "Hardware_Time_Delay.eep"
+Finished building: Hardware_Time_Delay.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Hardware_Time_Delay.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     316 bytes (1.0% Full)
+(.text + .data + .bootloader)
+
+Data:          9 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:03:13 **** Incremental Build of configuration Release for project Hardware_Time_Delay ****
+make all 
+Building file: ../Timer_Delay/timer_delay.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Timer_Delay/timer_delay.d" -MT"Timer_Delay/timer_delay.d" -c -o "Timer_Delay/timer_delay.o" "../Timer_Delay/timer_delay.c"
+Finished building: ../Timer_Delay/timer_delay.c
+ 
+Building target: Hardware_Time_Delay.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hardware_Time_Delay.map -mmcu=atmega32 -o "Hardware_Time_Delay.elf"  ./Timer_Delay/timer_delay.o  ./main.o   
+Finished building target: Hardware_Time_Delay.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Hardware_Time_Delay.elf  >"Hardware_Time_Delay.lss"
+Finished building: Hardware_Time_Delay.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Hardware_Time_Delay.elf  "Hardware_Time_Delay.hex"
+Finished building: Hardware_Time_Delay.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Hardware_Time_Delay.elf  "Hardware_Time_Delay.eep"
+Finished building: Hardware_Time_Delay.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Hardware_Time_Delay.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     308 bytes (0.9% Full)
+(.text + .data + .bootloader)
+
+Data:          9 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:07:03 **** Incremental Build of configuration Release for project Hardware_Time_Delay ****
+make all 
+Building file: ../Timer_Delay/timer_delay.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Timer_Delay/timer_delay.d" -MT"Timer_Delay/timer_delay.d" -c -o "Timer_Delay/timer_delay.o" "../Timer_Delay/timer_delay.c"
+Finished building: ../Timer_Delay/timer_delay.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Hardware_Time_Delay.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hardware_Time_Delay.map -mmcu=atmega32 -o "Hardware_Time_Delay.elf"  ./Timer_Delay/timer_delay.o  ./main.o   
+Finished building target: Hardware_Time_Delay.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Hardware_Time_Delay.elf  >"Hardware_Time_Delay.lss"
+Finished building: Hardware_Time_Delay.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Hardware_Time_Delay.elf  "Hardware_Time_Delay.hex"
+Finished building: Hardware_Time_Delay.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Hardware_Time_Delay.elf  "Hardware_Time_Delay.eep"
+Finished building: Hardware_Time_Delay.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Hardware_Time_Delay.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     220 bytes (0.7% Full)
+(.text + .data + .bootloader)
+
+Data:          9 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:07:18 **** Incremental Build of configuration Release for project Hardware_Time_Delay ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Hardware_Time_Delay.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hardware_Time_Delay.map -mmcu=atmega32 -o "Hardware_Time_Delay.elf"  ./Timer_Delay/timer_delay.o  ./main.o   
+Finished building target: Hardware_Time_Delay.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Hardware_Time_Delay.elf  >"Hardware_Time_Delay.lss"
+Finished building: Hardware_Time_Delay.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Hardware_Time_Delay.elf  "Hardware_Time_Delay.hex"
+Finished building: Hardware_Time_Delay.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Hardware_Time_Delay.elf  "Hardware_Time_Delay.eep"
+Finished building: Hardware_Time_Delay.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Hardware_Time_Delay.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     306 bytes (0.9% Full)
+(.text + .data + .bootloader)
+
+Data:          9 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:11:23 **** Incremental Build of configuration Release for project Hardware_Time_Delay ****
+make all 
+Building file: ../Timer_Delay/timer_delay.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Timer_Delay/timer_delay.d" -MT"Timer_Delay/timer_delay.d" -c -o "Timer_Delay/timer_delay.o" "../Timer_Delay/timer_delay.c"
+Finished building: ../Timer_Delay/timer_delay.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Hardware_Time_Delay.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hardware_Time_Delay.map -mmcu=atmega32 -o "Hardware_Time_Delay.elf"  ./Timer_Delay/timer_delay.o  ./main.o   
+Finished building target: Hardware_Time_Delay.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Hardware_Time_Delay.elf  >"Hardware_Time_Delay.lss"
+Finished building: Hardware_Time_Delay.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Hardware_Time_Delay.elf  "Hardware_Time_Delay.hex"
+Finished building: Hardware_Time_Delay.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Hardware_Time_Delay.elf  "Hardware_Time_Delay.eep"
+Finished building: Hardware_Time_Delay.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Hardware_Time_Delay.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     236 bytes (0.7% Full)
+(.text + .data + .bootloader)
+
+Data:          9 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:11:30 **** Incremental Build of configuration Release for project Hardware_Time_Delay ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+../main.c: In function '__vector_11':
+../main.c:29: error: 'Timer0_Overflow_Flag' undeclared (first use in this function)
+../main.c:29: error: (Each undeclared identifier is reported only once
+../main.c:29: error: for each function it appears in.)
+../main.c:31: error: 'Overflow_Every_1ms' undeclared (first use in this function)
 make: *** [main.o] Error 1
-02:05:38 **** Incremental Build of configuration Release for project GPIO_Keypad ****
+13:11:41 **** Incremental Build of configuration Release for project Hardware_Time_Delay ****
 make all 
-Building file: ../lcd/lcd_alphanumeric_16x2.c
+Building file: ../Timer_Delay/timer_delay.c
 Invoking: AVR Compiler
-avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"lcd/lcd_alphanumeric_16x2.d" -MT"lcd/lcd_alphanumeric_16x2.d" -c -o "lcd/lcd_alphanumeric_16x2.o" "../lcd/lcd_alphanumeric_16x2.c"
-In file included from ../lcd/lcd_alphanumeric_16x2.c:9:
-../lcd/lcd_alphanumeric_16x2.h:40: error: expected identifier or '(' before 'volatile'
-../lcd/lcd_alphanumeric_16x2.h:47: error: expected specifier-qualifier-list before 'REGISTER'
-../lcd/lcd_alphanumeric_16x2.h:60: error: expected specifier-qualifier-list before 'REGISTER'
-../lcd/lcd_alphanumeric_16x2.h:126: error: expected declaration specifiers or '...' before 'REGISTER'
-../lcd/lcd_alphanumeric_16x2.h:126: error: expected declaration specifiers or '...' before 'REGISTER'
-../lcd/lcd_alphanumeric_16x2.h:127: error: expected declaration specifiers or '...' before 'REGISTER'
-../lcd/lcd_alphanumeric_16x2.h:127: error: expected declaration specifiers or '...' before 'REGISTER'
-../lcd/lcd_alphanumeric_16x2.c:22: error: expected declaration specifiers or '...' before 'REGISTER'
-../lcd/lcd_alphanumeric_16x2.c:22: error: expected declaration specifiers or '...' before 'REGISTER'
-../lcd/lcd_alphanumeric_16x2.c:23: error: expected declaration specifiers or '...' before 'REGISTER'
-../lcd/lcd_alphanumeric_16x2.c:23: error: expected declaration specifiers or '...' before 'REGISTER'
-../lcd/lcd_alphanumeric_16x2.c: In function 'lcd_alphnumeric_16x2_cfg':
-../lcd/lcd_alphanumeric_16x2.c:28: error: 'DATA' has no member named 'DDR'
-../lcd/lcd_alphanumeric_16x2.c:28: error: 'data_ddr' undeclared (first use in this function)
-../lcd/lcd_alphanumeric_16x2.c:28: error: (Each undeclared identifier is reported only once
-../lcd/lcd_alphanumeric_16x2.c:28: error: for each function it appears in.)
-../lcd/lcd_alphanumeric_16x2.c:29: error: 'DATA' has no member named 'PRT'
-../lcd/lcd_alphanumeric_16x2.c:29: error: 'data_port' undeclared (first use in this function)
-../lcd/lcd_alphanumeric_16x2.c:31: error: 'DATA' has no member named 'pins'
-../lcd/lcd_alphanumeric_16x2.c:35: error: 'CONTROL' has no member named 'DDR'
-../lcd/lcd_alphanumeric_16x2.c:35: error: 'control_ddr' undeclared (first use in this function)
-../lcd/lcd_alphanumeric_16x2.c:36: error: 'CONTROL' has no member named 'PRT'
-../lcd/lcd_alphanumeric_16x2.c:36: error: 'control_port' undeclared (first use in this function)
-../lcd/lcd_alphanumeric_16x2.c:37: error: 'CONTROL' has no member named 'RS'
-../lcd/lcd_alphanumeric_16x2.c:38: error: 'CONTROL' has no member named 'EN'
-../lcd/lcd_alphanumeric_16x2.c: In function 'lcd_alphnumeric_16x2_init':
-../lcd/lcd_alphanumeric_16x2.c:55: error: 'DATA' has no member named 'DDR'
-../lcd/lcd_alphanumeric_16x2.c:55: error: 'DATA' has no member named 'pins'
-../lcd/lcd_alphanumeric_16x2.c:55: error: 'DATA' has no member named 'pins'
-../lcd/lcd_alphanumeric_16x2.c:55: error: 'DATA' has no member named 'pins'
-../lcd/lcd_alphanumeric_16x2.c:55: error: 'DATA' has no member named 'pins'
-../lcd/lcd_alphanumeric_16x2.c:57: error: 'DATA' has no member named 'PRT'
-../lcd/lcd_alphanumeric_16x2.c:57: error: 'DATA' has no member named 'pins'
-../lcd/lcd_alphanumeric_16x2.c:57: error: 'DATA' has no member named 'pins'
-../lcd/lcd_alphanumeric_16x2.c:57: error: 'DATA' has no member named 'pins'
-../lcd/lcd_alphanumeric_16x2.c:57: error: 'DATA' has no member named 'pins'
-../lcd/lcd_alphanumeric_16x2.c:61: error: 'CONTROL' has no member named 'DDR'
-../lcd/lcd_alphanumeric_16x2.c:61: error: 'CONTROL' has no member named 'RS'
-../lcd/lcd_alphanumeric_16x2.c:61: error: 'CONTROL' has no member named 'EN'
-../lcd/lcd_alphanumeric_16x2.c:63: error: 'CONTROL' has no member named 'PRT'
-../lcd/lcd_alphanumeric_16x2.c:63: error: 'CONTROL' has no member named 'RS'
-../lcd/lcd_alphanumeric_16x2.c:63: error: 'CONTROL' has no member named 'EN'
-../lcd/lcd_alphanumeric_16x2.c: In function 'lcd_alphnumeric_16x2_send_CMD':
-../lcd/lcd_alphanumeric_16x2.c:109: error: 'DATA' has no member named 'PRT'
-../lcd/lcd_alphanumeric_16x2.c:109: error: 'DATA' has no member named 'pins'
-../lcd/lcd_alphanumeric_16x2.c:112: error: 'DATA' has no member named 'PRT'
-../lcd/lcd_alphanumeric_16x2.c:112: error: 'DATA' has no member named 'pins'
-../lcd/lcd_alphanumeric_16x2.c:121: error: 'CONTROL' has no member named 'PRT'
-../lcd/lcd_alphanumeric_16x2.c:121: error: 'CONTROL' has no member named 'RS'
-../lcd/lcd_alphanumeric_16x2.c:124: error: 'CONTROL' has no member named 'PRT'
-../lcd/lcd_alphanumeric_16x2.c:124: error: 'CONTROL' has no member named 'EN'
-../lcd/lcd_alphanumeric_16x2.c:126: error: 'CONTROL' has no member named 'PRT'
-../lcd/lcd_alphanumeric_16x2.c:126: error: 'CONTROL' has no member named 'EN'
-../lcd/lcd_alphanumeric_16x2.c:135: error: 'DATA' has no member named 'PRT'
-../lcd/lcd_alphanumeric_16x2.c:135: error: 'DATA' has no member named 'pins'
-../lcd/lcd_alphanumeric_16x2.c:138: error: 'DATA' has no member named 'PRT'
-../lcd/lcd_alphanumeric_16x2.c:138: error: 'DATA' has no member named 'pins'
-../lcd/lcd_alphanumeric_16x2.c:147: error: 'CONTROL' has no member named 'PRT'
-../lcd/lcd_alphanumeric_16x2.c:147: error: 'CONTROL' has no member named 'EN'
-../lcd/lcd_alphanumeric_16x2.c:149: error: 'CONTROL' has no member named 'PRT'
-../lcd/lcd_alphanumeric_16x2.c:149: error: 'CONTROL' has no member named 'EN'
-../lcd/lcd_alphanumeric_16x2.c: In function 'lcd_alphnumeric_16x2_send_char':
-../lcd/lcd_alphanumeric_16x2.c:174: error: 'DATA' has no member named 'PRT'
-../lcd/lcd_alphanumeric_16x2.c:174: error: 'DATA' has no member named 'pins'
-../lcd/lcd_alphanumeric_16x2.c:177: error: 'DATA' has no member named 'PRT'
-../lcd/lcd_alphanumeric_16x2.c:177: error: 'DATA' has no member named 'pins'
-../lcd/lcd_alphanumeric_16x2.c:186: error: 'CONTROL' has no member named 'PRT'
-../lcd/lcd_alphanumeric_16x2.c:186: error: 'CONTROL' has no member named 'RS'
-../lcd/lcd_alphanumeric_16x2.c:189: error: 'CONTROL' has no member named 'PRT'
-../lcd/lcd_alphanumeric_16x2.c:189: error: 'CONTROL' has no member named 'EN'
-../lcd/lcd_alphanumeric_16x2.c:191: error: 'CONTROL' has no member named 'PRT'
-../lcd/lcd_alphanumeric_16x2.c:191: error: 'CONTROL' has no member named 'EN'
-../lcd/lcd_alphanumeric_16x2.c:200: error: 'DATA' has no member named 'PRT'
-../lcd/lcd_alphanumeric_16x2.c:200: error: 'DATA' has no member named 'pins'
-../lcd/lcd_alphanumeric_16x2.c:203: error: 'DATA' has no member named 'PRT'
-../lcd/lcd_alphanumeric_16x2.c:203: error: 'DATA' has no member named 'pins'
-../lcd/lcd_alphanumeric_16x2.c:212: error: 'CONTROL' has no member named 'PRT'
-../lcd/lcd_alphanumeric_16x2.c:212: error: 'CONTROL' has no member named 'EN'
-../lcd/lcd_alphanumeric_16x2.c:214: error: 'CONTROL' has no member named 'PRT'
-../lcd/lcd_alphanumeric_16x2.c:214: error: 'CONTROL' has no member named 'EN'
-../lcd/lcd_alphanumeric_16x2.c: In function 'lcd_alphnumeric_16x2_flush':
-../lcd/lcd_alphanumeric_16x2.c:388: warning: pointer targets in initialization differ in signedness
-../lcd/lcd_alphanumeric_16x2.c:390: warning: pointer targets in passing argument 2 of 'lcd_alphnumeric_16x2_send_string' differ in signedness
-make: *** [lcd/lcd_alphanumeric_16x2.o] Error 1
-02:06:21 **** Incremental Build of configuration Release for project GPIO_Keypad ****
-make all 
-Building file: ../lcd/lcd_alphanumeric_16x2.c
-Invoking: AVR Compiler
-avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"lcd/lcd_alphanumeric_16x2.d" -MT"lcd/lcd_alphanumeric_16x2.d" -c -o "lcd/lcd_alphanumeric_16x2.o" "../lcd/lcd_alphanumeric_16x2.c"
-../lcd/lcd_alphanumeric_16x2.c: In function 'lcd_alphnumeric_16x2_flush':
-../lcd/lcd_alphanumeric_16x2.c:388: warning: pointer targets in initialization differ in signedness
-../lcd/lcd_alphanumeric_16x2.c:390: warning: pointer targets in passing argument 2 of 'lcd_alphnumeric_16x2_send_string' differ in signedness
-Finished building: ../lcd/lcd_alphanumeric_16x2.c
- 
-Building file: ../Monitor/Monitor.c
-Invoking: AVR Compiler
-avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Monitor/Monitor.d" -MT"Monitor/Monitor.d" -c -o "Monitor/Monitor.o" "../Monitor/Monitor.c"
-Finished building: ../Monitor/Monitor.c
- 
-Building file: ../main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
-In file included from ../Monitor/Monitor.h:12,
-                 from ../main.c:8:
-../Monitor/../lcd/lcd_alphanumeric_16x2.h:40: error: expected '=', ',', ';', 'asm' or '__attribute__' before '*' token
-make: *** [main.o] Error 1
-02:08:06 **** Incremental Build of configuration Release for project GPIO_Keypad ****
-make all 
-Building file: ../lcd/lcd_alphanumeric_16x2.c
-Invoking: AVR Compiler
-avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"lcd/lcd_alphanumeric_16x2.d" -MT"lcd/lcd_alphanumeric_16x2.d" -c -o "lcd/lcd_alphanumeric_16x2.o" "../lcd/lcd_alphanumeric_16x2.c"
-../lcd/lcd_alphanumeric_16x2.c: In function 'lcd_alphnumeric_16x2_flush':
-../lcd/lcd_alphanumeric_16x2.c:388: warning: pointer targets in initialization differ in signedness
-../lcd/lcd_alphanumeric_16x2.c:390: warning: pointer targets in passing argument 2 of 'lcd_alphnumeric_16x2_send_string' differ in signedness
-Finished building: ../lcd/lcd_alphanumeric_16x2.c
- 
-Building file: ../Monitor/Monitor.c
-Invoking: AVR Compiler
-avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Monitor/Monitor.d" -MT"Monitor/Monitor.d" -c -o "Monitor/Monitor.o" "../Monitor/Monitor.c"
-Finished building: ../Monitor/Monitor.c
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Timer_Delay/timer_delay.d" -MT"Timer_Delay/timer_delay.d" -c -o "Timer_Delay/timer_delay.o" "../Timer_Delay/timer_delay.c"
+Finished building: ../Timer_Delay/timer_delay.c
  
 Building file: ../main.c
 Invoking: AVR Compiler
 avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
 Finished building: ../main.c
  
-Building target: GPIO_Keypad.elf
+Building target: Hardware_Time_Delay.elf
 Invoking: AVR C Linker
-avr-gcc -Wl,-Map,GPIO_Keypad.map -mmcu=atmega32 -o "GPIO_Keypad.elf"  ./lcd/lcd_alphanumeric_16x2.o  ./keypad/keypad4x4.o  ./Monitor/Monitor.o  ./main.o   
-Finished building target: GPIO_Keypad.elf
+avr-gcc -Wl,-Map,Hardware_Time_Delay.map -mmcu=atmega32 -o "Hardware_Time_Delay.elf"  ./Timer_Delay/timer_delay.o  ./main.o   
+Finished building target: Hardware_Time_Delay.elf
  
 Invoking: AVR Create Extended Listing
-avr-objdump -h -S GPIO_Keypad.elf  >"GPIO_Keypad.lss"
-Finished building: GPIO_Keypad.lss
+avr-objdump -h -S Hardware_Time_Delay.elf  >"Hardware_Time_Delay.lss"
+Finished building: Hardware_Time_Delay.lss
  
 Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex GPIO_Keypad.elf  "GPIO_Keypad.hex"
-Finished building: GPIO_Keypad.hex
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Hardware_Time_Delay.elf  "Hardware_Time_Delay.hex"
+Finished building: Hardware_Time_Delay.hex
  
 Create eeprom image (ihex format)
-avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex GPIO_Keypad.elf  "GPIO_Keypad.eep"
-Finished building: GPIO_Keypad.eep
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Hardware_Time_Delay.elf  "Hardware_Time_Delay.eep"
+Finished building: Hardware_Time_Delay.eep
  
 Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 GPIO_Keypad.elf
+avr-size --format=avr --mcu=atmega32 Hardware_Time_Delay.elf
 AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:    5054 bytes (15.4% Full)
+Program:     322 bytes (1.0% Full)
 (.text + .data + .bootloader)
 
-Data:         28 bytes (1.4% Full)
+Data:          9 bytes (0.4% Full)
 (.data + .bss + .noinit)
 
 
 Finished building: sizedummy
  
-02:09:20 **** Incremental Build of configuration Release for project GPIO_Keypad ****
+13:20:32 **** Incremental Build of configuration Release for project Hardware_Time_Delay ****
 make all 
-Building file: ../lcd/lcd_alphanumeric_16x2.c
+Building file: ../Timer_Delay/timer_delay.c
 Invoking: AVR Compiler
-avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"lcd/lcd_alphanumeric_16x2.d" -MT"lcd/lcd_alphanumeric_16x2.d" -c -o "lcd/lcd_alphanumeric_16x2.o" "../lcd/lcd_alphanumeric_16x2.c"
-../lcd/lcd_alphanumeric_16x2.c: In function 'lcd_alphnumeric_16x2_flush':
-../lcd/lcd_alphanumeric_16x2.c:388: warning: pointer targets in initialization differ in signedness
-../lcd/lcd_alphanumeric_16x2.c:390: warning: pointer targets in passing argument 2 of 'lcd_alphnumeric_16x2_send_string' differ in signedness
-Finished building: ../lcd/lcd_alphanumeric_16x2.c
- 
-Building file: ../Monitor/Monitor.c
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Timer_Delay/timer_delay.d" -MT"Timer_Delay/timer_delay.d" -c -o "Timer_Delay/timer_delay.o" "../Timer_Delay/timer_delay.c"
+../Timer_Delay/timer_delay.c: In function 'Timer0_Init':
+../Timer_Delay/timer_delay.c:22: error: 'Timer0_Overflow_Flag' undeclared (first use in this function)
+../Timer_Delay/timer_delay.c:22: error: (Each undeclared identifier is reported only once
+../Timer_Delay/timer_delay.c:22: error: for each function it appears in.)
+../Timer_Delay/timer_delay.c:23: error: 'MILLI' undeclared (first use in this function)
+../Timer_Delay/timer_delay.c:29: error: 'MICRO' undeclared (first use in this function)
+make: *** [Timer_Delay/timer_delay.o] Error 1
+13:20:45 **** Incremental Build of configuration Release for project Hardware_Time_Delay ****
+make all 
+Building file: ../Timer_Delay/timer_delay.c
 Invoking: AVR Compiler
-avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Monitor/Monitor.d" -MT"Monitor/Monitor.d" -c -o "Monitor/Monitor.o" "../Monitor/Monitor.c"
-Finished building: ../Monitor/Monitor.c
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Timer_Delay/timer_delay.d" -MT"Timer_Delay/timer_delay.d" -c -o "Timer_Delay/timer_delay.o" "../Timer_Delay/timer_delay.c"
+Finished building: ../Timer_Delay/timer_delay.c
  
 Building file: ../main.c
 Invoking: AVR Compiler
 avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
 Finished building: ../main.c
  
-Building target: GPIO_Keypad.elf
+Building target: Hardware_Time_Delay.elf
 Invoking: AVR C Linker
-avr-gcc -Wl,-Map,GPIO_Keypad.map -mmcu=atmega32 -o "GPIO_Keypad.elf"  ./lcd/lcd_alphanumeric_16x2.o  ./keypad/keypad4x4.o  ./Monitor/Monitor.o  ./main.o   
-Finished building target: GPIO_Keypad.elf
+avr-gcc -Wl,-Map,Hardware_Time_Delay.map -mmcu=atmega32 -o "Hardware_Time_Delay.elf"  ./Timer_Delay/timer_delay.o  ./main.o   
+Finished building target: Hardware_Time_Delay.elf
  
 Invoking: AVR Create Extended Listing
-avr-objdump -h -S GPIO_Keypad.elf  >"GPIO_Keypad.lss"
-Finished building: GPIO_Keypad.lss
+avr-objdump -h -S Hardware_Time_Delay.elf  >"Hardware_Time_Delay.lss"
+Finished building: Hardware_Time_Delay.lss
  
 Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex GPIO_Keypad.elf  "GPIO_Keypad.hex"
-Finished building: GPIO_Keypad.hex
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Hardware_Time_Delay.elf  "Hardware_Time_Delay.hex"
+Finished building: Hardware_Time_Delay.hex
  
 Create eeprom image (ihex format)
-avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex GPIO_Keypad.elf  "GPIO_Keypad.eep"
-Finished building: GPIO_Keypad.eep
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Hardware_Time_Delay.elf  "Hardware_Time_Delay.eep"
+Finished building: Hardware_Time_Delay.eep
  
 Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 GPIO_Keypad.elf
+avr-size --format=avr --mcu=atmega32 Hardware_Time_Delay.elf
 AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:    5054 bytes (15.4% Full)
-(.text + .data + .bootloader)
-
-Data:         28 bytes (1.4% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-02:09:27 **** Incremental Build of configuration Release for project GPIO_Keypad ****
-make all 
-Building file: ../main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
-../main.c: In function 'main':
-../main.c:32: warning: passing argument 2 of 'lcd.Print' makes pointer from integer without a cast
-Finished building: ../main.c
- 
-Building target: GPIO_Keypad.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,GPIO_Keypad.map -mmcu=atmega32 -o "GPIO_Keypad.elf"  ./lcd/lcd_alphanumeric_16x2.o  ./keypad/keypad4x4.o  ./Monitor/Monitor.o  ./main.o   
-Finished building target: GPIO_Keypad.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S GPIO_Keypad.elf  >"GPIO_Keypad.lss"
-Finished building: GPIO_Keypad.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex GPIO_Keypad.elf  "GPIO_Keypad.hex"
-Finished building: GPIO_Keypad.hex
- 
-Create eeprom image (ihex format)
-avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex GPIO_Keypad.elf  "GPIO_Keypad.eep"
-Finished building: GPIO_Keypad.eep
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 GPIO_Keypad.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    5070 bytes (15.5% Full)
-(.text + .data + .bootloader)
-
-Data:         28 bytes (1.4% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-02:10:34 **** Incremental Build of configuration Release for project GPIO_Keypad ****
-make all 
-Building file: ../main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
-Finished building: ../main.c
- 
-Building target: GPIO_Keypad.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,GPIO_Keypad.map -mmcu=atmega32 -o "GPIO_Keypad.elf"  ./lcd/lcd_alphanumeric_16x2.o  ./keypad/keypad4x4.o  ./Monitor/Monitor.o  ./main.o   
-Finished building target: GPIO_Keypad.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S GPIO_Keypad.elf  >"GPIO_Keypad.lss"
-Finished building: GPIO_Keypad.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex GPIO_Keypad.elf  "GPIO_Keypad.hex"
-Finished building: GPIO_Keypad.hex
- 
-Create eeprom image (ihex format)
-avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex GPIO_Keypad.elf  "GPIO_Keypad.eep"
-Finished building: GPIO_Keypad.eep
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 GPIO_Keypad.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    5078 bytes (15.5% Full)
-(.text + .data + .bootloader)
-
-Data:         28 bytes (1.4% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-02:16:52 **** Incremental Build of configuration Release for project GPIO_Keypad ****
-make all 
-Building file: ../main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
-../main.c: In function 'main':
-../main.c:33: warning: unused variable 'pressed_key'
-Finished building: ../main.c
- 
-Building target: GPIO_Keypad.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,GPIO_Keypad.map -mmcu=atmega32 -o "GPIO_Keypad.elf"  ./lcd/lcd_alphanumeric_16x2.o  ./keypad/keypad4x4.o  ./Monitor/Monitor.o  ./main.o   
-Finished building target: GPIO_Keypad.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S GPIO_Keypad.elf  >"GPIO_Keypad.lss"
-Finished building: GPIO_Keypad.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex GPIO_Keypad.elf  "GPIO_Keypad.hex"
-Finished building: GPIO_Keypad.hex
- 
-Create eeprom image (ihex format)
-avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex GPIO_Keypad.elf  "GPIO_Keypad.eep"
-Finished building: GPIO_Keypad.eep
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 GPIO_Keypad.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    5100 bytes (15.6% Full)
-(.text + .data + .bootloader)
-
-Data:         28 bytes (1.4% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-02:17:32 **** Incremental Build of configuration Release for project GPIO_Keypad ****
-make all 
-Building file: ../keypad/keypad4x4.c
-Invoking: AVR Compiler
-avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"keypad/keypad4x4.d" -MT"keypad/keypad4x4.d" -c -o "keypad/keypad4x4.o" "../keypad/keypad4x4.c"
-Finished building: ../keypad/keypad4x4.c
- 
-Building target: GPIO_Keypad.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,GPIO_Keypad.map -mmcu=atmega32 -o "GPIO_Keypad.elf"  ./lcd/lcd_alphanumeric_16x2.o  ./keypad/keypad4x4.o  ./Monitor/Monitor.o  ./main.o   
-Finished building target: GPIO_Keypad.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S GPIO_Keypad.elf  >"GPIO_Keypad.lss"
-Finished building: GPIO_Keypad.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex GPIO_Keypad.elf  "GPIO_Keypad.hex"
-Finished building: GPIO_Keypad.hex
- 
-Create eeprom image (ihex format)
-avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex GPIO_Keypad.elf  "GPIO_Keypad.eep"
-Finished building: GPIO_Keypad.eep
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 GPIO_Keypad.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    5100 bytes (15.6% Full)
-(.text + .data + .bootloader)
-
-Data:         28 bytes (1.4% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-02:18:52 **** Incremental Build of configuration Release for project GPIO_Keypad ****
-make all 
-Building file: ../keypad/keypad4x4.c
-Invoking: AVR Compiler
-avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"keypad/keypad4x4.d" -MT"keypad/keypad4x4.d" -c -o "keypad/keypad4x4.o" "../keypad/keypad4x4.c"
-Finished building: ../keypad/keypad4x4.c
- 
-Building target: GPIO_Keypad.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,GPIO_Keypad.map -mmcu=atmega32 -o "GPIO_Keypad.elf"  ./lcd/lcd_alphanumeric_16x2.o  ./keypad/keypad4x4.o  ./Monitor/Monitor.o  ./main.o   
-Finished building target: GPIO_Keypad.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S GPIO_Keypad.elf  >"GPIO_Keypad.lss"
-Finished building: GPIO_Keypad.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex GPIO_Keypad.elf  "GPIO_Keypad.hex"
-Finished building: GPIO_Keypad.hex
- 
-Create eeprom image (ihex format)
-avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex GPIO_Keypad.elf  "GPIO_Keypad.eep"
-Finished building: GPIO_Keypad.eep
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 GPIO_Keypad.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    5120 bytes (15.6% Full)
-(.text + .data + .bootloader)
-
-Data:         28 bytes (1.4% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-02:19:41 **** Incremental Build of configuration Release for project GPIO_Keypad ****
-make all 
-Building file: ../keypad/keypad4x4.c
-Invoking: AVR Compiler
-avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"keypad/keypad4x4.d" -MT"keypad/keypad4x4.d" -c -o "keypad/keypad4x4.o" "../keypad/keypad4x4.c"
-Finished building: ../keypad/keypad4x4.c
- 
-Building file: ../main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
-../main.c: In function 'main':
-../main.c:33: warning: unused variable 'pressed_key'
-Finished building: ../main.c
- 
-Building target: GPIO_Keypad.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,GPIO_Keypad.map -mmcu=atmega32 -o "GPIO_Keypad.elf"  ./lcd/lcd_alphanumeric_16x2.o  ./keypad/keypad4x4.o  ./Monitor/Monitor.o  ./main.o   
-Finished building target: GPIO_Keypad.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S GPIO_Keypad.elf  >"GPIO_Keypad.lss"
-Finished building: GPIO_Keypad.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex GPIO_Keypad.elf  "GPIO_Keypad.hex"
-Finished building: GPIO_Keypad.hex
- 
-Create eeprom image (ihex format)
-avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex GPIO_Keypad.elf  "GPIO_Keypad.eep"
-Finished building: GPIO_Keypad.eep
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 GPIO_Keypad.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    5114 bytes (15.6% Full)
-(.text + .data + .bootloader)
-
-Data:         28 bytes (1.4% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-07:57:44 **** Build of configuration Release for project GPIO_LCD ****
-make all 
-Building file: ../main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
-../main.c: In function 'main':
-../main.c:34: warning: overflow in implicit constant conversion
-Finished building: ../main.c
- 
-Building target: GPIO_LCD.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,GPIO_LCD.map -mmcu=atmega32 -o "GPIO_LCD.elf"  ./lcd/lcd_alphanumeric_16x2.o  ./Monitor/Monitor.o  ./main.o   
-Finished building target: GPIO_LCD.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S GPIO_LCD.elf  >"GPIO_LCD.lss"
-Finished building: GPIO_LCD.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex GPIO_LCD.elf  "GPIO_LCD.hex"
-Finished building: GPIO_LCD.hex
- 
-Create eeprom image (ihex format)
-avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex GPIO_LCD.elf  "GPIO_LCD.eep"
-Finished building: GPIO_LCD.eep
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 GPIO_LCD.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    4360 bytes (13.3% Full)
-(.text + .data + .bootloader)
-
-Data:         12 bytes (0.6% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-
-**** Build of configuration Release for project Timer_0 ****
-
-Nothing to build for project Timer_0
-07:57:53 **** Incremental Build of configuration Release for project GPIO_LCD ****
-make all 
-Building file: ../main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
-Finished building: ../main.c
- 
-Building target: GPIO_LCD.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,GPIO_LCD.map -mmcu=atmega32 -o "GPIO_LCD.elf"  ./lcd/lcd_alphanumeric_16x2.o  ./Monitor/Monitor.o  ./main.o   
-Finished building target: GPIO_LCD.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S GPIO_LCD.elf  >"GPIO_LCD.lss"
-Finished building: GPIO_LCD.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex GPIO_LCD.elf  "GPIO_LCD.hex"
-Finished building: GPIO_LCD.hex
- 
-Create eeprom image (ihex format)
-avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex GPIO_LCD.elf  "GPIO_LCD.eep"
-Finished building: GPIO_LCD.eep
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 GPIO_LCD.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    4368 bytes (13.3% Full)
-(.text + .data + .bootloader)
-
-Data:         12 bytes (0.6% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-
-**** Build of configuration Release for project Timer_0 ****
-
-Nothing to build for project Timer_0
-07:59:10 **** Incremental Build of configuration Release for project GPIO_LCD ****
-make all 
-Building file: ../main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
-Finished building: ../main.c
- 
-Building target: GPIO_LCD.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,GPIO_LCD.map -mmcu=atmega32 -o "GPIO_LCD.elf"  ./lcd/lcd_alphanumeric_16x2.o  ./Monitor/Monitor.o  ./main.o   
-Finished building target: GPIO_LCD.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S GPIO_LCD.elf  >"GPIO_LCD.lss"
-Finished building: GPIO_LCD.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex GPIO_LCD.elf  "GPIO_LCD.hex"
-Finished building: GPIO_LCD.hex
- 
-Create eeprom image (ihex format)
-avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex GPIO_LCD.elf  "GPIO_LCD.eep"
-Finished building: GPIO_LCD.eep
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 GPIO_LCD.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    4310 bytes (13.2% Full)
-(.text + .data + .bootloader)
-
-Data:         12 bytes (0.6% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-
-**** Build of configuration Release for project Timer_0 ****
-
-Nothing to build for project Timer_0
-07:59:24 **** Incremental Build of configuration Release for project GPIO_LCD ****
-make all 
-Building file: ../main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
-Finished building: ../main.c
- 
-Building target: GPIO_LCD.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,GPIO_LCD.map -mmcu=atmega32 -o "GPIO_LCD.elf"  ./lcd/lcd_alphanumeric_16x2.o  ./Monitor/Monitor.o  ./main.o   
-Finished building target: GPIO_LCD.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S GPIO_LCD.elf  >"GPIO_LCD.lss"
-Finished building: GPIO_LCD.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex GPIO_LCD.elf  "GPIO_LCD.hex"
-Finished building: GPIO_LCD.hex
- 
-Create eeprom image (ihex format)
-avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex GPIO_LCD.elf  "GPIO_LCD.eep"
-Finished building: GPIO_LCD.eep
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 GPIO_LCD.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    4310 bytes (13.2% Full)
-(.text + .data + .bootloader)
-
-Data:         12 bytes (0.6% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-
-**** Build of configuration Release for project Timer_0 ****
-
-Nothing to build for project Timer_0
-07:59:54 **** Incremental Build of configuration Release for project GPIO_LCD ****
-make all 
-Building file: ../main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
-Finished building: ../main.c
- 
-Building target: GPIO_LCD.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,GPIO_LCD.map -mmcu=atmega32 -o "GPIO_LCD.elf"  ./lcd/lcd_alphanumeric_16x2.o  ./Monitor/Monitor.o  ./main.o   
-Finished building target: GPIO_LCD.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S GPIO_LCD.elf  >"GPIO_LCD.lss"
-Finished building: GPIO_LCD.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex GPIO_LCD.elf  "GPIO_LCD.hex"
-Finished building: GPIO_LCD.hex
- 
-Create eeprom image (ihex format)
-avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex GPIO_LCD.elf  "GPIO_LCD.eep"
-Finished building: GPIO_LCD.eep
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 GPIO_LCD.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    4304 bytes (13.1% Full)
-(.text + .data + .bootloader)
-
-Data:         12 bytes (0.6% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-
-**** Build of configuration Release for project Timer_0 ****
-
-Nothing to build for project Timer_0
-08:00:06 **** Incremental Build of configuration Release for project GPIO_LCD ****
-make all 
-Building file: ../main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
-Finished building: ../main.c
- 
-Building target: GPIO_LCD.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,GPIO_LCD.map -mmcu=atmega32 -o "GPIO_LCD.elf"  ./lcd/lcd_alphanumeric_16x2.o  ./Monitor/Monitor.o  ./main.o   
-Finished building target: GPIO_LCD.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S GPIO_LCD.elf  >"GPIO_LCD.lss"
-Finished building: GPIO_LCD.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex GPIO_LCD.elf  "GPIO_LCD.hex"
-Finished building: GPIO_LCD.hex
- 
-Create eeprom image (ihex format)
-avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex GPIO_LCD.elf  "GPIO_LCD.eep"
-Finished building: GPIO_LCD.eep
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 GPIO_LCD.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    4304 bytes (13.1% Full)
-(.text + .data + .bootloader)
-
-Data:         12 bytes (0.6% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-
-**** Build of configuration Release for project Timer_0 ****
-
-Nothing to build for project Timer_0
-08:00:16 **** Incremental Build of configuration Release for project GPIO_LCD ****
-make all 
-Building file: ../main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
-Finished building: ../main.c
- 
-Building target: GPIO_LCD.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,GPIO_LCD.map -mmcu=atmega32 -o "GPIO_LCD.elf"  ./lcd/lcd_alphanumeric_16x2.o  ./Monitor/Monitor.o  ./main.o   
-Finished building target: GPIO_LCD.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S GPIO_LCD.elf  >"GPIO_LCD.lss"
-Finished building: GPIO_LCD.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex GPIO_LCD.elf  "GPIO_LCD.hex"
-Finished building: GPIO_LCD.hex
- 
-Create eeprom image (ihex format)
-avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex GPIO_LCD.elf  "GPIO_LCD.eep"
-Finished building: GPIO_LCD.eep
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 GPIO_LCD.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    4304 bytes (13.1% Full)
-(.text + .data + .bootloader)
-
-Data:         12 bytes (0.6% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-
-**** Build of configuration Release for project Timer_0 ****
-
-Nothing to build for project Timer_0
-08:00:27 **** Incremental Build of configuration Release for project GPIO_LCD ****
-make all 
-Building file: ../main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
-Finished building: ../main.c
- 
-Building target: GPIO_LCD.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,GPIO_LCD.map -mmcu=atmega32 -o "GPIO_LCD.elf"  ./lcd/lcd_alphanumeric_16x2.o  ./Monitor/Monitor.o  ./main.o   
-Finished building target: GPIO_LCD.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S GPIO_LCD.elf  >"GPIO_LCD.lss"
-Finished building: GPIO_LCD.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex GPIO_LCD.elf  "GPIO_LCD.hex"
-Finished building: GPIO_LCD.hex
- 
-Create eeprom image (ihex format)
-avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex GPIO_LCD.elf  "GPIO_LCD.eep"
-Finished building: GPIO_LCD.eep
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 GPIO_LCD.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    4304 bytes (13.1% Full)
-(.text + .data + .bootloader)
-
-Data:         12 bytes (0.6% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-
-**** Build of configuration Release for project Timer_0 ****
-
-Nothing to build for project Timer_0
-13:23:09 **** Build of configuration Release for project External_interrupts ****
-make all 
-Building file: ../External_interrupts/External_interrupts.c
-Invoking: AVR Compiler
-avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"External_interrupts/External_interrupts.d" -MT"External_interrupts/External_interrupts.d" -c -o "External_interrupts/External_interrupts.o" "../External_interrupts/External_interrupts.c"
-Finished building: ../External_interrupts/External_interrupts.c
- 
-Building file: ../main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
-Finished building: ../main.c
- 
-Building target: External_interrupts.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,External_interrupts.map -mmcu=atmega32 -o "External_interrupts.elf"  ./External_interrupts/External_interrupts.o  ./main.o   
-Finished building target: External_interrupts.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S External_interrupts.elf  >"External_interrupts.lss"
-Finished building: External_interrupts.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex External_interrupts.elf  "External_interrupts.hex"
-Finished building: External_interrupts.hex
- 
-Create eeprom image (ihex format)
-avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex External_interrupts.elf  "External_interrupts.eep"
-Finished building: External_interrupts.eep
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 External_interrupts.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:     280 bytes (0.9% Full)
+Program:     182 bytes (0.6% Full)
 (.text + .data + .bootloader)
 
 Data:          0 bytes (0.0% Full)
@@ -982,240 +764,476 @@ Data:          0 bytes (0.0% Full)
 
 Finished building: sizedummy
  
-13:33:03 **** Incremental Build of configuration Release for project External_interrupts ****
-make all 
-Building file: ../External_interrupts/External_interrupts.c
-Invoking: AVR Compiler
-avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"External_interrupts/External_interrupts.d" -MT"External_interrupts/External_interrupts.d" -c -o "External_interrupts/External_interrupts.o" "../External_interrupts/External_interrupts.c"
-In file included from ../External_interrupts/External_interrupts.c:7:
-../External_interrupts/External_interrupts.h: In function 'Enable_Global_Interrupt':
-../External_interrupts/External_interrupts.h:29: warning: implicit declaration of function 'kick'
-../External_interrupts/External_interrupts.h: In function 'Disable_Global_Interrupt':
-../External_interrupts/External_interrupts.h:32: warning: implicit declaration of function 'cei'
-Finished building: ../External_interrupts/External_interrupts.c
- 
-Building target: External_interrupts.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,External_interrupts.map -mmcu=atmega32 -o "External_interrupts.elf"  ./External_interrupts/External_interrupts.o  ./main.o   
-Finished building target: External_interrupts.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S External_interrupts.elf  >"External_interrupts.lss"
-Finished building: External_interrupts.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex External_interrupts.elf  "External_interrupts.hex"
-Finished building: External_interrupts.hex
- 
-Create eeprom image (ihex format)
-avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex External_interrupts.elf  "External_interrupts.eep"
-Finished building: External_interrupts.eep
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 External_interrupts.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:     316 bytes (1.0% Full)
-(.text + .data + .bootloader)
-
-Data:          0 bytes (0.0% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-13:33:20 **** Incremental Build of configuration Release for project External_interrupts ****
-make all 
-Building file: ../External_interrupts/External_interrupts.c
-Invoking: AVR Compiler
-avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"External_interrupts/External_interrupts.d" -MT"External_interrupts/External_interrupts.d" -c -o "External_interrupts/External_interrupts.o" "../External_interrupts/External_interrupts.c"
-In file included from ../External_interrupts/External_interrupts.c:7:
-../External_interrupts/External_interrupts.h: In function 'Disable_Global_Interrupt':
-../External_interrupts/External_interrupts.h:32: warning: implicit declaration of function 'cei'
-Finished building: ../External_interrupts/External_interrupts.c
- 
-Building target: External_interrupts.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,External_interrupts.map -mmcu=atmega32 -o "External_interrupts.elf"  ./External_interrupts/External_interrupts.o  ./main.o   
-Finished building target: External_interrupts.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S External_interrupts.elf  >"External_interrupts.lss"
-Finished building: External_interrupts.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex External_interrupts.elf  "External_interrupts.hex"
-Finished building: External_interrupts.hex
- 
-Create eeprom image (ihex format)
-avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex External_interrupts.elf  "External_interrupts.eep"
-Finished building: External_interrupts.eep
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 External_interrupts.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:     316 bytes (1.0% Full)
-(.text + .data + .bootloader)
-
-Data:          0 bytes (0.0% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-13:33:26 **** Incremental Build of configuration Release for project External_interrupts ****
-make all 
-Building file: ../External_interrupts/External_interrupts.c
-Invoking: AVR Compiler
-avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"External_interrupts/External_interrupts.d" -MT"External_interrupts/External_interrupts.d" -c -o "External_interrupts/External_interrupts.o" "../External_interrupts/External_interrupts.c"
-Finished building: ../External_interrupts/External_interrupts.c
- 
-Building target: External_interrupts.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,External_interrupts.map -mmcu=atmega32 -o "External_interrupts.elf"  ./External_interrupts/External_interrupts.o  ./main.o   
-Finished building target: External_interrupts.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S External_interrupts.elf  >"External_interrupts.lss"
-Finished building: External_interrupts.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex External_interrupts.elf  "External_interrupts.hex"
-Finished building: External_interrupts.hex
- 
-Create eeprom image (ihex format)
-avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex External_interrupts.elf  "External_interrupts.eep"
-Finished building: External_interrupts.eep
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 External_interrupts.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:     316 bytes (1.0% Full)
-(.text + .data + .bootloader)
-
-Data:          0 bytes (0.0% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-13:33:56 **** Incremental Build of configuration Release for project External_interrupts ****
-make all 
-Building file: ../External_interrupts/External_interrupts.c
-Invoking: AVR Compiler
-avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"External_interrupts/External_interrupts.d" -MT"External_interrupts/External_interrupts.d" -c -o "External_interrupts/External_interrupts.o" "../External_interrupts/External_interrupts.c"
-Finished building: ../External_interrupts/External_interrupts.c
- 
-Building target: External_interrupts.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,External_interrupts.map -mmcu=atmega32 -o "External_interrupts.elf"  ./External_interrupts/External_interrupts.o  ./main.o   
-Finished building target: External_interrupts.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S External_interrupts.elf  >"External_interrupts.lss"
-Finished building: External_interrupts.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex External_interrupts.elf  "External_interrupts.hex"
-Finished building: External_interrupts.hex
- 
-Create eeprom image (ihex format)
-avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex External_interrupts.elf  "External_interrupts.eep"
-Finished building: External_interrupts.eep
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 External_interrupts.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:     316 bytes (1.0% Full)
-(.text + .data + .bootloader)
-
-Data:          0 bytes (0.0% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-13:34:10 **** Incremental Build of configuration Release for project External_interrupts ****
-make all 
-Building file: ../External_interrupts/External_interrupts.c
-Invoking: AVR Compiler
-avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"External_interrupts/External_interrupts.d" -MT"External_interrupts/External_interrupts.d" -c -o "External_interrupts/External_interrupts.o" "../External_interrupts/External_interrupts.c"
-Finished building: ../External_interrupts/External_interrupts.c
- 
-Building target: External_interrupts.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,External_interrupts.map -mmcu=atmega32 -o "External_interrupts.elf"  ./External_interrupts/External_interrupts.o  ./main.o   
-Finished building target: External_interrupts.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S External_interrupts.elf  >"External_interrupts.lss"
-Finished building: External_interrupts.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex External_interrupts.elf  "External_interrupts.hex"
-Finished building: External_interrupts.hex
- 
-Create eeprom image (ihex format)
-avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex External_interrupts.elf  "External_interrupts.eep"
-Finished building: External_interrupts.eep
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 External_interrupts.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:     316 bytes (1.0% Full)
-(.text + .data + .bootloader)
-
-Data:          0 bytes (0.0% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-13:50:29 **** Incremental Build of configuration Release for project External_interrupts ****
+13:21:04 **** Incremental Build of configuration Release for project Hardware_Time_Delay ****
 make all 
 Building file: ../main.c
 Invoking: AVR Compiler
 avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
 Finished building: ../main.c
  
-Building target: External_interrupts.elf
+Building target: Hardware_Time_Delay.elf
 Invoking: AVR C Linker
-avr-gcc -Wl,-Map,External_interrupts.map -mmcu=atmega32 -o "External_interrupts.elf"  ./External_interrupts/External_interrupts.o  ./main.o   
-Finished building target: External_interrupts.elf
+avr-gcc -Wl,-Map,Hardware_Time_Delay.map -mmcu=atmega32 -o "Hardware_Time_Delay.elf"  ./Timer_Delay/timer_delay.o  ./main.o   
+Finished building target: Hardware_Time_Delay.elf
  
 Invoking: AVR Create Extended Listing
-avr-objdump -h -S External_interrupts.elf  >"External_interrupts.lss"
-Finished building: External_interrupts.lss
+avr-objdump -h -S Hardware_Time_Delay.elf  >"Hardware_Time_Delay.lss"
+Finished building: Hardware_Time_Delay.lss
  
 Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex External_interrupts.elf  "External_interrupts.hex"
-Finished building: External_interrupts.hex
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Hardware_Time_Delay.elf  "Hardware_Time_Delay.hex"
+Finished building: Hardware_Time_Delay.hex
  
 Create eeprom image (ihex format)
-avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex External_interrupts.elf  "External_interrupts.eep"
-Finished building: External_interrupts.eep
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Hardware_Time_Delay.elf  "Hardware_Time_Delay.eep"
+Finished building: Hardware_Time_Delay.eep
  
 Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 External_interrupts.elf
+avr-size --format=avr --mcu=atmega32 Hardware_Time_Delay.elf
 AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:     470 bytes (1.4% Full)
+Program:     182 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:21:15 **** Incremental Build of configuration Release for project Hardware_Time_Delay ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Hardware_Time_Delay.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hardware_Time_Delay.map -mmcu=atmega32 -o "Hardware_Time_Delay.elf"  ./Timer_Delay/timer_delay.o  ./main.o   
+Finished building target: Hardware_Time_Delay.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Hardware_Time_Delay.elf  >"Hardware_Time_Delay.lss"
+Finished building: Hardware_Time_Delay.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Hardware_Time_Delay.elf  "Hardware_Time_Delay.hex"
+Finished building: Hardware_Time_Delay.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Hardware_Time_Delay.elf  "Hardware_Time_Delay.eep"
+Finished building: Hardware_Time_Delay.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Hardware_Time_Delay.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     182 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:22:10 **** Incremental Build of configuration Release for project Hardware_Time_Delay ****
+make all 
+Building file: ../Timer_Delay/timer_delay.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Timer_Delay/timer_delay.d" -MT"Timer_Delay/timer_delay.d" -c -o "Timer_Delay/timer_delay.o" "../Timer_Delay/timer_delay.c"
+Finished building: ../Timer_Delay/timer_delay.c
+ 
+Building target: Hardware_Time_Delay.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hardware_Time_Delay.map -mmcu=atmega32 -o "Hardware_Time_Delay.elf"  ./Timer_Delay/timer_delay.o  ./main.o   
+Finished building target: Hardware_Time_Delay.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Hardware_Time_Delay.elf  >"Hardware_Time_Delay.lss"
+Finished building: Hardware_Time_Delay.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Hardware_Time_Delay.elf  "Hardware_Time_Delay.hex"
+Finished building: Hardware_Time_Delay.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Hardware_Time_Delay.elf  "Hardware_Time_Delay.eep"
+Finished building: Hardware_Time_Delay.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Hardware_Time_Delay.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     182 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:30:03 **** Incremental Build of configuration Release for project Hardware_Time_Delay ****
+make all 
+Building file: ../Timer_Delay/timer_delay.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Timer_Delay/timer_delay.d" -MT"Timer_Delay/timer_delay.d" -c -o "Timer_Delay/timer_delay.o" "../Timer_Delay/timer_delay.c"
+Finished building: ../Timer_Delay/timer_delay.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Hardware_Time_Delay.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hardware_Time_Delay.map -mmcu=atmega32 -o "Hardware_Time_Delay.elf"  ./Timer_Delay/timer_delay.o  ./main.o   
+Finished building target: Hardware_Time_Delay.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Hardware_Time_Delay.elf  >"Hardware_Time_Delay.lss"
+Finished building: Hardware_Time_Delay.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Hardware_Time_Delay.elf  "Hardware_Time_Delay.hex"
+Finished building: Hardware_Time_Delay.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Hardware_Time_Delay.elf  "Hardware_Time_Delay.eep"
+Finished building: Hardware_Time_Delay.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Hardware_Time_Delay.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     182 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:30:30 **** Incremental Build of configuration Release for project Hardware_Time_Delay ****
+make all 
+Building file: ../Timer_Delay/timer_delay.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Timer_Delay/timer_delay.d" -MT"Timer_Delay/timer_delay.d" -c -o "Timer_Delay/timer_delay.o" "../Timer_Delay/timer_delay.c"
+Finished building: ../Timer_Delay/timer_delay.c
+ 
+Building target: Hardware_Time_Delay.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hardware_Time_Delay.map -mmcu=atmega32 -o "Hardware_Time_Delay.elf"  ./Timer_Delay/timer_delay.o  ./main.o   
+Finished building target: Hardware_Time_Delay.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Hardware_Time_Delay.elf  >"Hardware_Time_Delay.lss"
+Finished building: Hardware_Time_Delay.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Hardware_Time_Delay.elf  "Hardware_Time_Delay.hex"
+Finished building: Hardware_Time_Delay.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Hardware_Time_Delay.elf  "Hardware_Time_Delay.eep"
+Finished building: Hardware_Time_Delay.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Hardware_Time_Delay.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     182 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:30:41 **** Incremental Build of configuration Release for project Hardware_Time_Delay ****
+make all 
+Building file: ../Timer_Delay/timer_delay.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Timer_Delay/timer_delay.d" -MT"Timer_Delay/timer_delay.d" -c -o "Timer_Delay/timer_delay.o" "../Timer_Delay/timer_delay.c"
+Finished building: ../Timer_Delay/timer_delay.c
+ 
+Building target: Hardware_Time_Delay.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hardware_Time_Delay.map -mmcu=atmega32 -o "Hardware_Time_Delay.elf"  ./Timer_Delay/timer_delay.o  ./main.o   
+Finished building target: Hardware_Time_Delay.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Hardware_Time_Delay.elf  >"Hardware_Time_Delay.lss"
+Finished building: Hardware_Time_Delay.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Hardware_Time_Delay.elf  "Hardware_Time_Delay.hex"
+Finished building: Hardware_Time_Delay.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Hardware_Time_Delay.elf  "Hardware_Time_Delay.eep"
+Finished building: Hardware_Time_Delay.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Hardware_Time_Delay.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     182 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:35:38 **** Incremental Build of configuration Release for project Hardware_Time_Delay ****
+make all 
+Building file: ../Timer_Delay/timer_delay.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Timer_Delay/timer_delay.d" -MT"Timer_Delay/timer_delay.d" -c -o "Timer_Delay/timer_delay.o" "../Timer_Delay/timer_delay.c"
+Finished building: ../Timer_Delay/timer_delay.c
+ 
+Building target: Hardware_Time_Delay.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hardware_Time_Delay.map -mmcu=atmega32 -o "Hardware_Time_Delay.elf"  ./Timer_Delay/timer_delay.o  ./main.o   
+Finished building target: Hardware_Time_Delay.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Hardware_Time_Delay.elf  >"Hardware_Time_Delay.lss"
+Finished building: Hardware_Time_Delay.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Hardware_Time_Delay.elf  "Hardware_Time_Delay.hex"
+Finished building: Hardware_Time_Delay.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Hardware_Time_Delay.elf  "Hardware_Time_Delay.eep"
+Finished building: Hardware_Time_Delay.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Hardware_Time_Delay.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     190 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:38:12 **** Incremental Build of configuration Release for project Hardware_Time_Delay ****
+make all 
+Building file: ../Timer_Delay/timer_delay.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Timer_Delay/timer_delay.d" -MT"Timer_Delay/timer_delay.d" -c -o "Timer_Delay/timer_delay.o" "../Timer_Delay/timer_delay.c"
+Finished building: ../Timer_Delay/timer_delay.c
+ 
+Building target: Hardware_Time_Delay.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hardware_Time_Delay.map -mmcu=atmega32 -o "Hardware_Time_Delay.elf"  ./Timer_Delay/timer_delay.o  ./main.o   
+Finished building target: Hardware_Time_Delay.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Hardware_Time_Delay.elf  >"Hardware_Time_Delay.lss"
+Finished building: Hardware_Time_Delay.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Hardware_Time_Delay.elf  "Hardware_Time_Delay.hex"
+Finished building: Hardware_Time_Delay.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Hardware_Time_Delay.elf  "Hardware_Time_Delay.eep"
+Finished building: Hardware_Time_Delay.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Hardware_Time_Delay.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     216 bytes (0.7% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:50:22 **** Incremental Build of configuration Release for project Hardware_Time_Delay ****
+make all 
+Building file: ../Timer_Delay/timer_delay.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Timer_Delay/timer_delay.d" -MT"Timer_Delay/timer_delay.d" -c -o "Timer_Delay/timer_delay.o" "../Timer_Delay/timer_delay.c"
+Finished building: ../Timer_Delay/timer_delay.c
+ 
+Building target: Hardware_Time_Delay.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hardware_Time_Delay.map -mmcu=atmega32 -o "Hardware_Time_Delay.elf"  ./Timer_Delay/timer_delay.o  ./main.o   
+Finished building target: Hardware_Time_Delay.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Hardware_Time_Delay.elf  >"Hardware_Time_Delay.lss"
+Finished building: Hardware_Time_Delay.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Hardware_Time_Delay.elf  "Hardware_Time_Delay.hex"
+Finished building: Hardware_Time_Delay.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Hardware_Time_Delay.elf  "Hardware_Time_Delay.eep"
+Finished building: Hardware_Time_Delay.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Hardware_Time_Delay.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     190 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:54:02 **** Incremental Build of configuration Release for project Hardware_Time_Delay ****
+make all 
+Building file: ../Timer_Delay/timer_delay.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Timer_Delay/timer_delay.d" -MT"Timer_Delay/timer_delay.d" -c -o "Timer_Delay/timer_delay.o" "../Timer_Delay/timer_delay.c"
+Finished building: ../Timer_Delay/timer_delay.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Hardware_Time_Delay.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hardware_Time_Delay.map -mmcu=atmega32 -o "Hardware_Time_Delay.elf"  ./Timer_Delay/timer_delay.o  ./main.o   
+Finished building target: Hardware_Time_Delay.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Hardware_Time_Delay.elf  >"Hardware_Time_Delay.lss"
+Finished building: Hardware_Time_Delay.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Hardware_Time_Delay.elf  "Hardware_Time_Delay.hex"
+Finished building: Hardware_Time_Delay.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Hardware_Time_Delay.elf  "Hardware_Time_Delay.eep"
+Finished building: Hardware_Time_Delay.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Hardware_Time_Delay.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     236 bytes (0.7% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:57:02 **** Incremental Build of configuration Release for project Hardware_Time_Delay ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Hardware_Time_Delay.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hardware_Time_Delay.map -mmcu=atmega32 -o "Hardware_Time_Delay.elf"  ./Timer_Delay/timer_delay.o  ./main.o   
+Finished building target: Hardware_Time_Delay.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Hardware_Time_Delay.elf  >"Hardware_Time_Delay.lss"
+Finished building: Hardware_Time_Delay.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Hardware_Time_Delay.elf  "Hardware_Time_Delay.hex"
+Finished building: Hardware_Time_Delay.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Hardware_Time_Delay.elf  "Hardware_Time_Delay.eep"
+Finished building: Hardware_Time_Delay.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Hardware_Time_Delay.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     236 bytes (0.7% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:58:40 **** Incremental Build of configuration Release for project Hardware_Time_Delay ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Hardware_Time_Delay.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hardware_Time_Delay.map -mmcu=atmega32 -o "Hardware_Time_Delay.elf"  ./Timer_Delay/timer_delay.o  ./main.o   
+Finished building target: Hardware_Time_Delay.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Hardware_Time_Delay.elf  >"Hardware_Time_Delay.lss"
+Finished building: Hardware_Time_Delay.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Hardware_Time_Delay.elf  "Hardware_Time_Delay.hex"
+Finished building: Hardware_Time_Delay.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Hardware_Time_Delay.elf  "Hardware_Time_Delay.eep"
+Finished building: Hardware_Time_Delay.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Hardware_Time_Delay.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     236 bytes (0.7% Full)
 (.text + .data + .bootloader)
 
 Data:          0 bytes (0.0% Full)

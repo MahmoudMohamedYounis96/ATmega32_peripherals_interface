@@ -1,0 +1,42 @@
+13:58:40 **** Incremental Build of configuration Release for project Hardware_Time_Delay ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Hardware_Time_Delay.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hardware_Time_Delay.map -mmcu=atmega32 -o "Hardware_Time_Delay.elf"  ./Timer_Delay/timer_delay.o  ./main.o   
+Finished building target: Hardware_Time_Delay.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Hardware_Time_Delay.elf  >"Hardware_Time_Delay.lss"
+Finished building: Hardware_Time_Delay.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Hardware_Time_Delay.elf  "Hardware_Time_Delay.hex"
+Finished building: Hardware_Time_Delay.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Hardware_Time_Delay.elf  "Hardware_Time_Delay.eep"
+Finished building: Hardware_Time_Delay.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Hardware_Time_Delay.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     236 bytes (0.7% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+13:58:41 Build Finished (took 485ms)
+

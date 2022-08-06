@@ -1,0 +1,44 @@
+/*
+ * timer_delay.h
+ *
+ *  Created on: Jul 31, 2022
+ *      Author: Mahmoud_Mohamed
+ */
+
+#ifndef TIMER_DELAY_H_
+#define TIMER_DELAY_H_
+
+/*====================== Includes ======================*/
+// AVR AT_Mega32 Libraries.
+#include <avr/io.h>
+#include <avr/interrupt.h>
+
+/*====================== Enums ======================*/
+typedef enum Overflow_flag{
+	MILLI, MICRO
+}OVERFLOW_FLAG;
+
+typedef enum timer0_is_busy{
+	BUSY, NOTBUSY=!BUSY
+}TIMER0_ISBUSY;
+
+/*====================== Public Functions definitions ======================*/
+void Timer0_Delay_us(uint32_t time);
+
+void Timer0_Delay_ms(uint32_t time);
+
+/*==========================================================*/
+// %%%%%%%%%%%%%%%%%% External %%%%%%%%%%%%%%%%%%.
+static inline OVERFLOW_FLAG Get_Timer0_Overflow_Flag(void);
+/*====================== ISR Function ======================*/
+ISR(TIMER0_OVF_vect){
+	if(Get_Timer0_Overflow_Flag() == MILLI){
+		// Increment the counter.
+		Overflow_Every_1ms ++;
+
+		// Reload the TCNT0.
+		TCNT0 = 0x83;
+	}
+}
+
+#endif /* TIMER_DELAY_H_ */

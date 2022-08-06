@@ -1,0 +1,38 @@
+/*
+ * main.c
+ *
+ *  Created on: Jul 30, 2022
+ *      Author: Mahmoud_Mohamed
+ */
+
+/*============================= Includes ==========================*/
+#include <stdio.h>
+#include <stdint.h>
+
+#include <avr/io.h>
+#include <avr/interrupt.h>
+
+/*============================= Definitions ==========================*/
+#ifndef Kick
+#define Kick() __asm__ __volatile__("nop" ::)
+#endif /* Kick */
+
+/*============================= variables ==========================*/
+volatile uint32_t Overflow_Every_1us = 0;	// This variable will be incremented every one micro second.
+
+volatile uint32_t Overflow_Every_1ms = 0;   // this variable will be incremented every one milli second.
+
+/*============================= static & inline functions ==========================*/
+
+/*============================= Functions definitions ==========================*/
+void Timer0_Delay_ms(uint32_t time);
+
+/*============================= Main Function  ==========================*/
+int main(void){
+	while(1);
+	return 0;
+}
+
+ISR(TIMER0_OVF_vect){
+
+}

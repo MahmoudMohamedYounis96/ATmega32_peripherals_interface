@@ -1,0 +1,29 @@
+/*
+ * timer_delay.c
+ *
+ *  Created on: Jul 31, 2022
+ *      Author: Mahmoud_Mohamed
+ */
+#include "timer_delay.h"
+
+/*====================== Functions Declarations ======================*/
+void Timer0_Delay_us(uint32_t time){
+	// Select Flag to generate overflow every 1 micro second.
+	Set_Timer0_Overflow_Flag(MICRO);
+
+	// Set counter to zero.
+	Set_Overflow_Every_1us(0);
+
+	// Initialize timer0 to overflow every 1 micro second.
+}
+
+void Timer0_Delay_ms(uint32_t time){
+	// Select Flag to generate overflow every 1 milli second.
+	Set_Timer0_Overflow_Flag(MILLI);
+
+	// Set counter to zero.
+	Set_Overflow_Every_1ms(0);
+
+	// Initialize timer0 to overflow every 1 milli second.
+
+}

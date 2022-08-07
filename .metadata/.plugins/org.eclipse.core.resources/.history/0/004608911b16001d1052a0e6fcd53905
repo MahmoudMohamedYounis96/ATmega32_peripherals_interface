@@ -1,0 +1,64 @@
+/*
+ * main.c
+ *
+ *  Created on: Aug 7, 2022
+ *      Author: Mahmoud_Mohamed
+ */
+
+// ==================== Includes =====================
+// >> Standard AVR libraries.
+#include <avr/io.h>
+#include <avr/interrupt.h>
+
+// >> Standard integer type library.
+#include <stdint.h>
+
+/*****************************************************
+ * How To generate a square wave using timer2 ?
+ * !1! Initialize TCCR2.
+ * !2! Load OCR2 with the compare value.
+ * !3! Configure OC2 as output pin.
+ *
+ * For Example, need to generate square wave one milli second
+ * for low, and another one for high level.
+ * So, Square wave period time = 2 Milli Seconds.
+ * F(sqw) = 1/2*10^-3 = 500 HZ.
+ * Need OC2 to toggle every one milli second.
+ * F_CPU = 8 MHZ, T_CPU = 0.125 us.
+ * If pre-scaler = 64. So, T_Timer = 64*0.125 = 8 us.
+ * For T_delay = 1 ms, Number of counts = 1 ms / 8 us = 125 counts.
+ * 125 counts = 124 for OCR2 and one for OCF2.
+ * So, ......
+ * TCCR2 = 0x1C {CTC mode, Toggle OC2 on Compare Match, and clkI/O/64 (From prescaler).}
+ * OCR2 = 124 = 0x7C.
+ */
+
+// ==================== Definitions ===================
+#define
+
+// ==================== Generation function ===================
+void GeneratSqaureWave_Timer2(void){
+	// Configure OC2{PD7} pin as output.
+	DDRD |= (1<<PD7);
+
+	// Load TCCR2 with the control value.
+	TCCR2 = 0x1C;
+
+	// Load OCR2 with compare value.
+	OCR2 = 0x7C;
+
+	// Exit the function.
+	return;
+}
+
+// ==================== Main function ===================
+int main(void){
+	// Generate square wave.
+	GeneratSqaureWave_Timer2();
+
+	// Endless loop.
+	for(;;);
+
+	// Return value.
+	return 0;
+}

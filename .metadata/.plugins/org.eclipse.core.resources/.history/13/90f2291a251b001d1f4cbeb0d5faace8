@@ -9,9 +9,6 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
 
-// >> Util delay library.
-#include <util/delay.h>
-
 // >> Standard integer type library.
 #include <stdint.h>
 
@@ -31,14 +28,14 @@
 
 // ==================== Generation function ===================
 void GeneratSqaurePWM_Timer0(void){
-	// Configure OC0{PB3} pin as output.
-	DDRB |= (1<<PB3);
+	// Configure OC2{PD7} pin as output.
+	DDRD |= (1<<PD7);
 
 	// Load TCCR2 with the control value.
-	TCCR0 = 0x61;
+	TCCR2 = 0x1C;
 
-	// Load OCR0 with compare value, this value will give a 50% duty cycle.
-	OCR0 = 127;
+	// Load OCR2 with compare value.
+	OCR2 = 0x7C;
 
 	// Exit the function.
 	return;
@@ -50,19 +47,7 @@ int16_t main(void){
 	GeneratSqaurePWM_Timer0();
 
 	// Endless loop.
-	uint8_t DutyCycler0 = 0;
-
-	for(;;){
-		for(DutyCycler0=0; DutyCycler0<255; DutyCycler0++){
-			OCR0 = DutyCycler0;
-			_delay_ms(10);
-		}
-		_delay_ms(1000);
-		for(DutyCycler0=255; DutyCycler0>0; DutyCycler0--){
-			OCR0 = DutyCycler0;
-			_delay_ms(10);
-		}
-	}
+	for(;;);
 
 	// Return value.
 	return 0;

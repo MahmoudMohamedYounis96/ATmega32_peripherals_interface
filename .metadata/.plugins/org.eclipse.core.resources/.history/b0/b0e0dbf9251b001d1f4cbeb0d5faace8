@@ -9,9 +9,6 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
 
-// >> Util delay library.
-#include <util/delay.h>
-
 // >> Standard integer type library.
 #include <stdint.h>
 
@@ -50,19 +47,7 @@ int16_t main(void){
 	GeneratSqaurePWM_Timer0();
 
 	// Endless loop.
-	uint8_t DutyCycler0 = 0;
-
-	for(;;){
-		for(DutyCycler0=0; DutyCycler0<255; DutyCycler0++){
-			OCR0 = DutyCycler0;
-			_delay_ms(10);
-		}
-		_delay_ms(1000);
-		for(DutyCycler0=255; DutyCycler0>0; DutyCycler0--){
-			OCR0 = DutyCycler0;
-			_delay_ms(10);
-		}
-	}
+	for(;;);
 
 	// Return value.
 	return 0;

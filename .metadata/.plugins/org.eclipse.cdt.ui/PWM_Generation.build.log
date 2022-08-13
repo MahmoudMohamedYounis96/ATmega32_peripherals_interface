@@ -1,20 +1,3 @@
-18:29:44 **** Incremental Build of configuration Release for project PWM_Generation ****
-make all 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 PWM_Generation.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:     136 bytes (0.4% Full)
-(.text + .data + .bootloader)
-
-Data:          0 bytes (0.0% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
 18:35:49 **** Incremental Build of configuration Release for project PWM_Generation ****
 make all 
 Building file: ../main.c
@@ -54,3 +37,6 @@ Data:          0 bytes (0.0% Full)
 
 Finished building: sizedummy
  
+
+18:35:50 Build Finished (took 491ms)
+
